@@ -95,3 +95,213 @@ gcc -shared -fpic -o ObjectName.so fileName.o
 
 ## JNI与Java类型
 
+# ndkbuild和cmake
+
+使用Jni有两种编译方案，传统的ndkbuild和IDE创建项目时使用的cmake。
+
+## ndkbuild
+
+- 新建Java类，声明native方法
+
+  ```java
+  package com.leo.demojni;
+  
+  public class JniDemo {
+      public static native String getStringJNI();
+  }
+  ```
+
+  
+
+- 在需要使用native方法的地方使用
+
+  ```java
+         TextView tv =findViewById(R.id.text);
+          tv.setText(JniDemo.getStringJNI());
+  ```
+
+  
+
+- 编译工程，make project，将native工具类编译成class文件。
+
+  ​	生成的class文件在/app/build/intermediates/javac//debug/classes下
+
+- 生成.h文件，通过javah将.clases文件生成头文件(注意要加包名)
+
+- 编写C/C++代码
+
+  ​	引入生成的.h头文件，实现方法。并将.h文件和.c文件都放在/src/main/jni/下
+
+- 编写Andorid.mk
+
+  ```makefile
+  LOCAL_PATH := $(call my-dir)
+  include $(CLEAR_VARS)
+  LOCAL_MODULE    := ndkdemotest-jni
+  LOCAL_SRC_FILES := ndkdemotest.c
+  include $(BUILD_SHARED_LIBRARY)
+  ```
+
+  LOCAL_MODULE 确定生成的模块名，生成时会自动加上合适的前缀和后缀。
+
+  LOCAL_SRC_FILE:要编译进模块的C或者C++文件
+
+  include $(BUILD_SHARED_LIBRARY) 指定要生成库的格式，是静态库还是动态库。
+
+- 编译方式选择
+
+  使用gradle进行ndk编译，app module设置编译路径
+
+  ```
+    externalNativeBuild {
+              ndkBuild {
+                  path 'src/main/jni/Android.mk'
+              }
+          }
+  ```
+
+- 在native方法的申明引用so库
+
+  ```java
+  package com.leo.demojni;
+  
+  public class JniDemo {
+      static {
+          System.loadLibrary("getString-jni");
+  
+      }
+      public static native String getStringJNI();
+  }
+  ```
+
+  
+
+- 运行
+
+## cmake
+
+- [ ] 待整理
+
+# 静态注册与动态注册
+
+## 静态注册
+
+根据函数名建立Java方法与JNI函数一一对应的关系。及上文中ndkbuild中的实现方式。
+
+由Java得到本地方法的声明，然后再通过JNI实现申明该方法。
+
+缺点:
+
+- 编写麻烦，JNI方法名字需要遵照规则且名称长
+- 编程过程贼麻烦
+- 每次新增或者修改接口，需要重新生成.h文件
+- 运行效率低，初次调用native函数，需要根据函数名在JNI层中搜索对应的本地函数。
+
+## 动态注册
+
+利用 RegisterNatives 方法来注册 java 中的native方法与C++ 函数的一一对应关系。
+
+当系统中调用System.loadLibrary函数是，该函数会找到对应的库，然后会试图查询JNI_onLoad函数，如果有则可以与JNIEnv的registerNatives函数结合起来，实现动态的函数替换。
+
+其实是通过反射实现的，通过JNI_onLoad方法拿到虚拟机对象，再通过反射拿到native方法的类对象。
+
+通过JNI重载JNI_OnLoad()实现本地方法，然后直接在Java中调用本地方法。
+
+### 函数映射表
+
+```cpp
+static JNINativeMethod method_table[] = {
+        {"test1", "(I)I", (void *)n_test1},
+        {"test2", "(Ljava/lang/String;)Ljava/lang/String;", (void *)n_test2}
+};
+```
+
+Java中的方法名、描述Java方法的参数和返回值(签名)、Java接口映射的Native函数指针。
+
+签名的目的是为了函数的重载，()中方法的参数类型，()后面表示返回值的类型。有相应的描述符。
+
+
+
+### 实现流程
+
+- 通过签名信息将Java方法和C方法一一对应起来
+
+- 新建Java类，声明要引用的so库
+
+  ```java
+  package com.leo.demojni;
+  
+  public class JniDemo {
+      static {
+          System.loadLibrary("jni-dynamic");
+      }
+      public static native String getHello();
+  }
+  
+  ```
+
+  
+
+- 重写注册入口函数和函数映射表
+
+  ```c++
+  //#include <stdlib.h>
+  //#include <stdio.h>
+  //#include <string.h>
+  #include "jni.h"
+  //需要调用Native方法的Java类
+  #define JNI_REG_CLASS "com/leo/demojni/JniDemo" // path of Java file
+  //native方法实现
+  JNIEXPORT jstring JNICALL get_hello(JNIEnv *env, jclass clazz) {
+      return env->NewStringUTF("hello from jni");
+  }
+  
+  //
+  static JNINativeMethod g_methods[] = {
+          {"getHello", "()Ljava/lang/String;", (void *) get_hello},
+  };
+  
+  //重写JNI_OnLoad()函数
+  JNIEXPORT int JNICALL JNI_OnLoad(JavaVM *vm, void *reserved) {
+      JNIEnv *env;
+      if (vm->GetEnv((void **) &env, JNI_VERSION_1_6) != JNI_OK) {
+          return JNI_ERR;
+      }
+  
+      jclass javaClass = env->FindClass(JNI_REG_CLASS);
+      if (javaClass == NULL) {
+          return JNI_ERR;
+      }
+  
+      int method_count = sizeof(g_methods) / sizeof(g_methods[0]);
+      if (env->RegisterNatives(javaClass, g_methods, method_count) < 0) {
+          return JNI_ERR;
+      }
+  
+      return JNI_VERSION_1_6;
+  }
+  
+  
+  ```
+
+  
+
+- 编写Android.mk文件，同静态注册。
+
+- 完成运行
+
+# native反调用Java层代码
+
+
+
+https://www.jianshu.com/p/b71aeb4ed13d
+
+
+
+
+
+
+
+
+
+
