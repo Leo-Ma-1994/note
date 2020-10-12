@@ -292,7 +292,13 @@ Java中的方法名、描述Java方法的参数和返回值(签名)、Java接口
 
 # native反调用Java层代码
 
+# 在JNI中的打印log
 
+第一步：在对应的mk文件中加入:LOCAL_LDLIBS := -llog
+第二步：在要使用LOG的cpp文件中加入：
+\#include <android/log.h>
+\#define LOGD(...) __android_log_print(ANDROID_LOG_DEBUG, "keymatch", __VA_ARGS__)
+第三步：这样就可以使用了：LOGD("我要看到的调试信息");
 
 https://www.jianshu.com/p/b71aeb4ed13d
 
