@@ -1,4 +1,4 @@
-# Launcher.db
+#  Launcher.db
 
 初始化创建Launcher.db时候，数据库创建了favorites和workspaceScreens两张表
 
