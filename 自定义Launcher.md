@@ -1,3 +1,7 @@
+[toc]
+
+
+
 # 去掉QuickSearchBar
 
 只有第一屏有QuickSearchBar。QSB默认在第一个屏幕中且无法移动。

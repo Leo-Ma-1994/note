@@ -1,3 +1,7 @@
+[toc]
+
+
+
 /system/lib/hw中定义了硬件抽象层编译的动态库文件。
 
 APP会通过控件调用framework层的libui库，libui库根据ID号选调hardware层的动态库"/system/lib/hw/gralloc.*.so",然后硬件抽象层再继续调用驱动层的接口/dev/fb0
@@ -109,29 +113,52 @@ ax2129/system/lib下
 
 
 
+# 1.加载驱动
 
+##自动加载驱动.ko模块
 
-# 自动加载驱动模块
+ko模块是为了生成节点.
 
-在init.rc on boot中添加
+ko模块在vendor/lib/modules/leds-gpio.ko中,需要加载才可以使用.
 
-chmod 0770 /vendor/lib/modules/leds-gpio.ko 
+手动加载可以通过adb,在su权限下,使用insmod vendor/lib/modules/leds-gpio.ko
+
+自动加载可以在 在init.rc   on init中添加
+
+system/core/rootdir/init.rc
+
+```
+chmod 0777 /vendor/lib/modules/leds-gpio.ko 
 
 insmod /vendor/lib/modules/leds-gpio.ko
+```
+
+##改变节点的读写权限
+
+生成的节点通常root下才具有读写权限,这里需要将其更改为system下也可以进行读写.
+
+做法是在system/core/rootdir/init.rc  on boot阶段添加
+
+```
+  chown system system /sys/class/leds/info1_blue/brightness
+  chown system system /sys/class/leds/info1_red/brightness
+  chown system system /sys/class/leds/info1_green/brightness
+  chown system system /sys/class/leds/info2_blue/brightness
+  chown system system /sys/class/leds/info2_red/brightness
+  chown system system /sys/class/leds/info2_green/brightness
+  chown system system /sys/class/leds/info3_blue/brightness
+  chown system system /sys/class/leds/info3_red/brightness
+  chown system system /sys/class/leds/info3_green/brightness
+  chown system system /sys/class/leds/info4_blue/brightness
+  chown system system /sys/class/leds/info4_red/brightness
+  chown system system /sys/class/leds/info4_green/brightness
+```
 
 
 
 
 
-
-
-AIDL的目的是为了跨进程调用Service
-
-# JNI层
-
-
-
-
+# 2.JNI层
 
 编写接口文件aidl给应用程序使用。
 
@@ -147,19 +174,9 @@ AIDL的目的是为了跨进程调用Service
 
 通过硬件模块ID来加载指定的硬件抽象层模块并打开硬件设备。
 
-
-
-(运行时库)JNI层实现步骤：
-
-
-
-- **step1：编写JNI本地方法**
+##编写JNI本地方法
 
 /frameworks/base/services/core/jni中添加JNI文件，命名为com_android_server_LedService.cpp表示硬件服务方法
-
-在/frameworks/base/services/core/Java/com/android/server
-
-或者frameworks/base/services/java/com/android/server下的LedService.java
 
 编写JNI本地方法
 
@@ -241,11 +258,9 @@ namespace android
 
 
 
+##动态注册
 
-
-- **step2：动态注册**
-
-  在同目录中onload.cpp中注册本地方法，这样就完成了jni的动态注册。
+在同目录中onload.cpp中注册本地方法，这样就完成了jni的动态注册。
 
 在Android系统初始化时，就会自动加载该JNI方法调用表。
 
@@ -256,9 +271,9 @@ register_android_server_LedService(env);
 
 
 
-- **step3：将JNI添加进system.img**
+##将JNI添加进system.img
 
-  在同目录下的Android.bp中添加写好的JNI文件，确保system.img镜像文件包含我们刚才编写的JNI方法了，
+在同目录下的Android.bp中添加写好的JNI文件，确保system.img镜像文件包含我们刚才编写的JNI方法了，
 
 ```
         "com_android_server_LedService.cpp",
@@ -266,13 +281,15 @@ register_android_server_LedService(env);
 
 
 
-- **step4：重新编译system.img**
+重新编译system.img
 
-  mmm frameworks/base/services/
+mmm frameworks/base/services/
 
-  make snod  重新打包system.img
+make snod  重新打包system.img
 
-## 硬件服务实现步骤：
+
+
+#3.硬件服务及管理类实现
 
 通常硬件服务是运行在独立进程中为各种应用程序提供服务的。
 
@@ -288,7 +305,7 @@ register_android_server_LedService(env);
 6. 配置修改SELinux权限。（在Enforcing强制模式下，无法使用）
 7. 编译，需先make update-api
 
-- **step1：定义aidl**
+##定义aidl
 
 在frameworks/base/core/java/android/os中，
 
@@ -304,7 +321,7 @@ interface ILedService {
 
 
 
-- **step2：生成stub**
+##生成stub
 
 在frameworks/base的Android.bp中加入
 
@@ -316,7 +333,7 @@ interface ILedService {
 
 
 
-- **step3：实现服务类**
+## 实现服务类
 
 frameworks/base/services/core/java/com/android/server/LedService.java
 
@@ -345,7 +362,7 @@ public class LedService extends ILedService.Stub {
 
 
 
-- **step4: 添加Context常量**
+## 添加Context常量
 
 在/frameworks/base/core/java/android/content/Context.java中加入
 
@@ -357,7 +374,7 @@ public static final String LED_SERVICE="led";
 
 
 
-- **step5：将service加入SystemServer启动流程**
+## 将service加入SystemServer启动流程
 
 frameworks/base/services/java/com/android/server/SystemServer.java
 
@@ -381,7 +398,7 @@ frameworks/base/services/java/com/android/server/SystemServer.java
 
 
 
-- **step5：创建Service的管理类，创建Manager**
+## 创建Service的管理类，创建Manager
 
 通过该管理类，将Service封装起来，方便调用者使用。
 
@@ -444,7 +461,7 @@ public class LEDManager {
 
 
 
-- **step6: 注册管理类**
+## 注册管理类
 
 通过getSystemService来获取管理类对象。
 
@@ -469,7 +486,9 @@ public class LEDManager {
 
 编译代码
 
-make update-api
+make update-api /
+
+make api-stubs-docs-update-current-api
 
 修改frameworks层，定义了新的共有变量、常量或方法之后，需要make update-api。
 
@@ -477,39 +496,67 @@ make -j8
 
 
 
+# 4.sepolicy解决
 
+TODO
 
-make api-stubs-docs-update-current-api
+# 5.应用层app demo实现
 
+## 系统服务使用
 
-
-
-
-
-
-> hw_get_module(CUSTOMLED_HARDWARE_MODULE_ID, (hw_module_t const**)&module);
->
->​	err = customled_open(&module->common, &device);
->
->static inline int customled_open(const struct hw_module_t* module,
->
->​        struct customled_device** device) {
->
->
->
->  printf("customled_open E\n");
->
->  return module->methods->open(module,
->
->  CUSTOMLED_HARDWARE_MODULE_ID, TO_HW_DEVICE_T_OPEN(device));
->
->}
+```
+import android.os.ServiceManager;
+import android.app.LEDManager;
+ledManager = (LEDManager)getSystemService(Context.LED_SERVICE);
+```
 
 
 
+## android.mk文件编写
+
+```
+LOCAL_PATH:= $(call my-dir)
+
+include $(CLEAR_VARS)
+
+LOCAL_SRC_FILES := $(call all-java-files-under, app/src/main/java)
+LOCAL_RESOURCE_DIR := $(addprefix $(LOCAL_PATH)/, app/src/main/res)
+LOCAL_MANIFEST_FILE := app/src/main/AndroidManifest.xml
+
+LOCAL_PACKAGE_NAME := LEDDEMO
+
+LOCAL_PRIVATE_PLATFORM_APIS := true
+
+LOCAL_CERTIFICATE := platform
+
+LOCAL_PRIVILEGED_MODULE := true
+
+LOCAL_DEX_PREOPT := false
+
+LOCAL_STATIC_ANDROID_LIBRARIES += \
+    androidx-constraintlayout_constraintlayout
+
+LOCAL_STATIC_JAVA_LIBRARIES += \
+    androidx-constraintlayout_constraintlayout-solver \
+    androidx.annotation_annotation \
+    androidx.core_core \
+    androidx.customview_customview
+
+LOCAL_USE_AAPT2 := true
+
+# BUILD_PACKAGE 是一个预定义的宏，里面包含编译一个APK的脚本。
+include $(BUILD_PACKAGE)
+```
 
 
-手动载入模块 insmod sdcard/filename.ko
+
+将demo添加进源码整编
+
+device/huaqin/common/device.mk
+
+```
+PRODUCT_PACKAGES += LEDDEMO
+```
 
 
 
@@ -908,3 +955,100 @@ audit(0.0:270): avc: denied { write } for name="brightness" dev="sysfs" ino=2418
 \#define LED4_DEVICE_RED "/sys/class/leds/info4_red/brightness"
 
 \#define LED4_DEVICE_GREEN   "/sys/class/leds/info4_green/brightness"
+
+
+
+
+
+
+
+
+
+/sys/class/leds/info1_blue/brightness    0666 root root
+/sys/class/leds/info1_red/brightness    0666 root root
+/sys/class/leds/info1_green/brightness    0666 root root
+/sys/class/leds/info2_blue/brightness    0666 root root
+/sys/class/leds/info2_red/brightness    0666 root root
+/sys/class/leds/info2_green/brightness    0666 root root
+/sys/class/leds/info3_blue/brightness    0666 root root
+/sys/class/leds/info3_red/brightness    0666 root root
+/sys/class/leds/info3_green/brightness    0666 root root
+/sys/class/leds/info4_blue/brightness    0666 root root
+/sys/class/leds/info4_red/brightness    0666 root root
+/sys/class/leds/info4_green/brightness    0666 root root
+
+ # Start leds.ko
+    chmod 0777 /vendor/lib/modules/leds-gpio.ko 
+    insmod /vendor/lib/modules/leds-gpio.ko
+
+
+
+
+
+```
+      traceBeginAndSlog("StartLedService");
+        try {
+            Slog.i("maxiang", "StartLedService");
+            LedService ledService = new LedService();
+            ServiceManager.addService(Context.LED_SERVICE, ledService);
+            for (int i = 0; i < 3 ; i++) {
+                ledService.set_customled_status(255,10);
+                ledService.set_customled_status(255,12);
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        ledService.set_customled_status(0,10);
+                        ledService.set_customled_status(0,12);
+                    }
+                },1000);
+                ledService.customled_close();
+            }
+        } catch (Throwable e) {
+            reportWtf("starting Led Service", e);
+        }
+        traceEnd();
+    }
+```
+
+
+
+```
+		// Message msg = Message.obtain();
+		// msg.arg1 = 0;
+		// msg.what = 0;
+		// mLedHandler.sendMessage(msg);
+```
+
+
+
+
+
+```
+	// private Handler mLedHandler = new Handler() {
+	// 	@Override
+	// 	public void handleMessage(Message msg) {
+	// 		super.handleMessage(msg);
+	// 		if (msg.what == 0) {
+	// 			set_customled_status(255, 10);
+	// 			set_customled_status(255, 11);
+	// 			set_customled_status(255, 12);
+	// 		} else {
+	// 			set_customled_status(0, 10);
+	// 			set_customled_status(0, 11);
+	// 			set_customled_status(0, 12);
+	// 		}
+	// 		msg.arg1++;
+	// 		if (msg.arg1 < 8) {
+	// 			Message msg1 = Message.obtain();
+	// 			msg1.arg1 = msg.arg1;
+	// 			msg1.what = (msg.what == 0 ? 1 : 0);
+	// 			sendMessageDelayed(msg1, 1000);
+	// 		} else {
+	// 			for (int i = 1; i <= 12; i++) {
+	// 				set_customled_status(0, i);
+	// 			}
+	// 		}
+	// 	}
+	// };
+```
+
