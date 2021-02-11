@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <EditText android:id="@+id/edittext_message" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Please input message" android:ems="10" android:singleLine="true">
+        <requestFocus/>
+    </EditText>
+    <EditText android:id="@+id/edittext_target" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Please input target phone number" android:ems="10" android:singleLine="true" android:numeric="integer"/>
+</LinearLayout>

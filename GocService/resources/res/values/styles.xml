@@ -1,0 +1,1344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="res_2131558400_alertdialog_appcompat" parent="@style/res_2131558407_base_alertdialog_appcompat">
+    </style>
+    <style name="res_2131558401_alertdialog_appcompat_light" parent="@style/res_2131558408_base_alertdialog_appcompat_light">
+    </style>
+    <style name="res_2131558402_animation_appcompat_dialog" parent="@style/res_2131558409_base_animation_appcompat_dialog">
+    </style>
+    <style name="res_2131558403_animation_appcompat_dropdownup" parent="@style/res_2131558410_base_animation_appcompat_dropdownup">
+    </style>
+    <style name="res_2131558404_animation_appcompat_tooltip" parent="@style/res_2131558411_base_animation_appcompat_tooltip">
+    </style>
+    <style name="AppHidTheme" parent="@android:style/Theme.Holo.Light">
+    </style>
+    <style name="AppTheme" parent="@android:style/Theme.Holo.Light.DarkActionBar">
+    </style>
+    <style name="res_2131558407_base_alertdialog_appcompat" parent="@android:style/Widget">
+        <item name="android:layout">@layout/abc_alert_dialog_material</item>
+        <item name="buttonIconDimen">@dimen/abc_alert_dialog_button_dimen</item>
+        <item name="listItemLayout">@layout/select_dialog_item_material</item>
+        <item name="listLayout">@layout/abc_select_dialog_material</item>
+        <item name="multiChoiceItemLayout">@layout/select_dialog_multichoice_material</item>
+        <item name="singleChoiceItemLayout">@layout/select_dialog_singlechoice_material</item>
+    </style>
+    <style name="res_2131558408_base_alertdialog_appcompat_light" parent="@style/res_2131558407_base_alertdialog_appcompat">
+    </style>
+    <style name="res_2131558409_base_animation_appcompat_dialog" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/abc_popup_enter</item>
+        <item name="android:windowExitAnimation">@anim/abc_popup_exit</item>
+    </style>
+    <style name="res_2131558410_base_animation_appcompat_dropdownup" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/abc_grow_fade_in_from_bottom</item>
+        <item name="android:windowExitAnimation">@anim/abc_shrink_fade_out_from_bottom</item>
+    </style>
+    <style name="res_2131558411_base_animation_appcompat_tooltip" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/abc_tooltip_enter</item>
+        <item name="android:windowExitAnimation">@anim/abc_tooltip_exit</item>
+    </style>
+    <style name="res_2131558412_base_dialogwindowtitle_appcompat" parent="@android:style/Widget">
+        <item name="android:textAppearance">@style/res_2131558616_textappearance_appcompat_title</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:scrollHorizontally">true</item>
+    </style>
+    <style name="res_2131558413_base_dialogwindowtitlebackground_appcompat" parent="@android:style/Widget">
+        <item name="android:background">@null</item>
+        <item name="android:paddingLeft">?attr/dialogPreferredPadding</item>
+        <item name="android:paddingTop">@dimen/abc_dialog_padding_top_material</item>
+        <item name="android:paddingRight">?attr/dialogPreferredPadding</item>
+    </style>
+    <style name="res_2131558414_base_textappearance_appcompat" parent="@android:style/TextAppearance.Material">
+    </style>
+    <style name="res_2131558415_base_textappearance_appcompat_body1" parent="@android:style/TextAppearance.Material.Body1">
+    </style>
+    <style name="res_2131558416_base_textappearance_appcompat_body2" parent="@android:style/TextAppearance.Material.Body2">
+    </style>
+    <style name="res_2131558417_base_textappearance_appcompat_button" parent="@android:style/TextAppearance.Material.Button">
+    </style>
+    <style name="res_2131558418_base_textappearance_appcompat_caption" parent="@android:style/TextAppearance.Material.Caption">
+    </style>
+    <style name="res_2131558419_base_textappearance_appcompat_display1" parent="@android:style/TextAppearance.Material.Display1">
+    </style>
+    <style name="res_2131558420_base_textappearance_appcompat_display2" parent="@android:style/TextAppearance.Material.Display2">
+    </style>
+    <style name="res_2131558421_base_textappearance_appcompat_display3" parent="@android:style/TextAppearance.Material.Display3">
+    </style>
+    <style name="res_2131558422_base_textappearance_appcompat_display4" parent="@android:style/TextAppearance.Material.Display4">
+    </style>
+    <style name="res_2131558423_base_textappearance_appcompat_headline" parent="@android:style/TextAppearance.Material.Headline">
+    </style>
+    <style name="res_2131558424_base_textappearance_appcompat_inverse" parent="@android:style/TextAppearance.Material.Inverse">
+    </style>
+    <style name="res_2131558425_base_textappearance_appcompat_large" parent="@android:style/TextAppearance.Material.Large">
+    </style>
+    <style name="res_2131558426_base_textappearance_appcompat_large_inverse" parent="@android:style/TextAppearance.Material.Large.Inverse">
+    </style>
+    <style name="res_2131558427_base_textappearance_appcompat_light_widget_popupmenu_large" parent="@android:style/TextAppearance.Material.Widget.PopupMenu.Large">
+    </style>
+    <style name="res_2131558428_base_textappearance_appcompat_light_widget_popupmenu_small" parent="@android:style/TextAppearance.Material.Widget.PopupMenu.Small">
+    </style>
+    <style name="res_2131558429_base_textappearance_appcompat_medium" parent="@android:style/TextAppearance.Material.Medium">
+    </style>
+    <style name="res_2131558430_base_textappearance_appcompat_medium_inverse" parent="@android:style/TextAppearance.Material.Medium.Inverse">
+    </style>
+    <style name="res_2131558431_base_textappearance_appcompat_menu" parent="@android:style/TextAppearance.Material.Menu">
+    </style>
+    <style name="res_2131558432_base_textappearance_appcompat_searchresult">
+        <item name="android:textStyle">@null</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textColorHint">?android:attr/textColorHint</item>
+    </style>
+    <style name="res_2131558433_base_textappearance_appcompat_searchresult_subtitle" parent="@android:style/TextAppearance.Material.SearchResult.Subtitle">
+    </style>
+    <style name="res_2131558434_base_textappearance_appcompat_searchresult_title" parent="@android:style/TextAppearance.Material.SearchResult.Title">
+    </style>
+    <style name="res_2131558435_base_textappearance_appcompat_small" parent="@android:style/TextAppearance.Material.Small">
+    </style>
+    <style name="res_2131558436_base_textappearance_appcompat_small_inverse" parent="@android:style/TextAppearance.Material.Small.Inverse">
+    </style>
+    <style name="res_2131558437_base_textappearance_appcompat_subhead" parent="@android:style/TextAppearance.Material.Subhead">
+    </style>
+    <style name="res_2131558438_base_textappearance_appcompat_subhead_inverse" parent="@style/res_2131558437_base_textappearance_appcompat_subhead">
+        <item name="android:textColor">?android:attr/textColorPrimaryInverse</item>
+        <item name="android:textColorHighlight">?android:attr/textColorHighlightInverse</item>
+        <item name="android:textColorHint">?android:attr/textColorHintInverse</item>
+        <item name="android:textColorLink">?android:attr/textColorLinkInverse</item>
+    </style>
+    <style name="res_2131558439_base_textappearance_appcompat_title" parent="@android:style/TextAppearance.Material.Title">
+    </style>
+    <style name="res_2131558440_base_textappearance_appcompat_title_inverse" parent="@style/res_2131558439_base_textappearance_appcompat_title">
+        <item name="android:textColor">?android:attr/textColorPrimaryInverse</item>
+        <item name="android:textColorHighlight">?android:attr/textColorHighlightInverse</item>
+        <item name="android:textColorHint">?android:attr/textColorHintInverse</item>
+        <item name="android:textColorLink">?android:attr/textColorLinkInverse</item>
+    </style>
+    <style name="res_2131558441_base_textappearance_appcompat_tooltip" parent="@style/res_2131558414_base_textappearance_appcompat">
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="res_2131558442_base_textappearance_appcompat_widget_actionbar_menu" parent="@style/res_2131558593_textappearance_appcompat_button">
+        <item name="android:textColor">?attr/actionMenuTextColor</item>
+        <item name="textAllCaps">@bool/abc_config_actionMenuItemAllCaps</item>
+    </style>
+    <style name="res_2131558443_base_textappearance_appcompat_widget_actionbar_subtitle" parent="@android:style/TextAppearance.Material.Widget.ActionBar.Subtitle">
+    </style>
+    <style name="res_2131558444_base_textappearance_appcompat_widget_actionbar_subtitle_inverse" parent="@android:style/TextAppearance.Material.Widget.ActionBar.Subtitle.Inverse">
+    </style>
+    <style name="res_2131558445_base_textappearance_appcompat_widget_actionbar_title" parent="@android:style/TextAppearance.Material.Widget.ActionBar.Title">
+    </style>
+    <style name="res_2131558446_base_textappearance_appcompat_widget_actionbar_title_inverse" parent="@android:style/TextAppearance.Material.Widget.ActionBar.Title.Inverse">
+    </style>
+    <style name="res_2131558447_base_textappearance_appcompat_widget_actionmode_subtitle" parent="@android:style/TextAppearance.Material.Widget.ActionMode.Subtitle">
+    </style>
+    <style name="res_2131558448_base_textappearance_appcompat_widget_actionmode_title" parent="@android:style/TextAppearance.Material.Widget.ActionMode.Title">
+    </style>
+    <style name="res_2131558449_base_textappearance_appcompat_widget_button" parent="@android:style/TextAppearance.Material.Widget.Button">
+    </style>
+    <style name="res_2131558450_base_textappearance_appcompat_widget_button_borderless_colored" parent="@style/res_2131558449_base_textappearance_appcompat_widget_button">
+        <item name="android:textColor">@color/abc_btn_colored_borderless_text_material</item>
+    </style>
+    <style name="res_2131558451_base_textappearance_appcompat_widget_button_colored" parent="@style/res_2131558449_base_textappearance_appcompat_widget_button">
+        <item name="android:textColor">@color/abc_btn_colored_text_material</item>
+    </style>
+    <style name="res_2131558452_base_textappearance_appcompat_widget_button_inverse" parent="@style/res_2131558593_textappearance_appcompat_button">
+        <item name="android:textColor">?android:attr/textColorPrimaryInverse</item>
+    </style>
+    <style name="res_2131558453_base_textappearance_appcompat_widget_dropdownitem" parent="@android:style/TextAppearance.Small">
+        <item name="android:textColor">?android:attr/textColorPrimaryDisableOnly</item>
+    </style>
+    <style name="res_2131558454_base_textappearance_appcompat_widget_popupmenu_header" parent="@style/res_2131558590_textappearance_appcompat">
+        <item name="android:textSize">@dimen/abc_text_size_menu_header_material</item>
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="res_2131558455_base_textappearance_appcompat_widget_popupmenu_large" parent="@android:style/TextAppearance.Material.Widget.PopupMenu.Large">
+    </style>
+    <style name="res_2131558456_base_textappearance_appcompat_widget_popupmenu_small" parent="@android:style/TextAppearance.Material.Widget.PopupMenu.Small">
+    </style>
+    <style name="res_2131558457_base_textappearance_appcompat_widget_switch" parent="@android:style/TextAppearance.Material.Button">
+    </style>
+    <style name="res_2131558458_base_textappearance_appcompat_widget_textview_spinneritem" parent="@android:style/TextAppearance.Material.Widget.TextView.SpinnerItem">
+    </style>
+    <style name="res_2131558459_base_textappearance_widget_appcompat_expandedmenu_item" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textColor">?android:attr/textColorPrimaryDisableOnly</item>
+    </style>
+    <style name="res_2131558460_base_textappearance_widget_appcompat_toolbar_subtitle" parent="@android:style/TextAppearance.Material.Widget.ActionBar.Subtitle">
+    </style>
+    <style name="res_2131558461_base_textappearance_widget_appcompat_toolbar_title" parent="@android:style/TextAppearance.Material.Widget.ActionBar.Title">
+    </style>
+    <style name="res_2131558462_base_theme_appcompat" parent="@style/res_2131558483_base_v21_theme_appcompat">
+    </style>
+    <style name="res_2131558463_base_theme_appcompat_compactmenu">
+        <item name="android:listViewStyle">@style/res_2131558728_widget_appcompat_listview_menu</item>
+        <item name="android:windowAnimationStyle">@style/res_2131558403_animation_appcompat_dropdownup</item>
+        <item name="android:itemTextAppearance">?android:attr/textAppearanceMedium</item>
+    </style>
+    <style name="res_2131558464_base_theme_appcompat_dialog" parent="@style/res_2131558484_base_v21_theme_appcompat_dialog">
+    </style>
+    <style name="res_2131558465_base_theme_appcompat_dialog_alert" parent="@style/res_2131558464_base_theme_appcompat_dialog">
+        <item name="android:windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
+        <item name="android:windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
+    </style>
+    <style name="res_2131558466_base_theme_appcompat_dialog_fixedsize" parent="@style/res_2131558464_base_theme_appcompat_dialog">
+        <item name="windowFixedHeightMajor">@dimen/abc_dialog_fixed_height_major</item>
+        <item name="windowFixedHeightMinor">@dimen/abc_dialog_fixed_height_minor</item>
+        <item name="windowFixedWidthMajor">@dimen/abc_dialog_fixed_width_major</item>
+        <item name="windowFixedWidthMinor">@dimen/abc_dialog_fixed_width_minor</item>
+    </style>
+    <style name="res_2131558467_base_theme_appcompat_dialog_minwidth" parent="@style/res_2131558464_base_theme_appcompat_dialog">
+        <item name="android:windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
+        <item name="android:windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
+    </style>
+    <style name="res_2131558468_base_theme_appcompat_dialogwhenlarge" parent="@style/res_2131558646_theme_appcompat">
+    </style>
+    <style name="res_2131558469_base_theme_appcompat_light" parent="@style/res_2131558485_base_v21_theme_appcompat_light">
+    </style>
+    <style name="res_2131558470_base_theme_appcompat_light_darkactionbar" parent="@style/res_2131558469_base_theme_appcompat_light">
+        <item name="actionBarPopupTheme">@style/res_2131558675_themeoverlay_appcompat_light</item>
+        <item name="actionBarTheme">@style/res_2131558670_themeoverlay_appcompat_dark_actionbar</item>
+        <item name="actionBarWidgetTheme">@null</item>
+        <item name="colorPrimary">@color/primary_material_dark</item>
+        <item name="colorPrimaryDark">@color/primary_dark_material_dark</item>
+        <item name="listChoiceBackgroundIndicator">@drawable/abc_list_selector_holo_dark</item>
+    </style>
+    <style name="res_2131558471_base_theme_appcompat_light_dialog" parent="@style/res_2131558486_base_v21_theme_appcompat_light_dialog">
+    </style>
+    <style name="res_2131558472_base_theme_appcompat_light_dialog_alert" parent="@style/res_2131558471_base_theme_appcompat_light_dialog">
+        <item name="android:windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
+        <item name="android:windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
+    </style>
+    <style name="res_2131558473_base_theme_appcompat_light_dialog_fixedsize" parent="@style/res_2131558471_base_theme_appcompat_light_dialog">
+        <item name="windowFixedHeightMajor">@dimen/abc_dialog_fixed_height_major</item>
+        <item name="windowFixedHeightMinor">@dimen/abc_dialog_fixed_height_minor</item>
+        <item name="windowFixedWidthMajor">@dimen/abc_dialog_fixed_width_major</item>
+        <item name="windowFixedWidthMinor">@dimen/abc_dialog_fixed_width_minor</item>
+    </style>
+    <style name="res_2131558474_base_theme_appcompat_light_dialog_minwidth" parent="@style/res_2131558471_base_theme_appcompat_light_dialog">
+        <item name="android:windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
+        <item name="android:windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
+    </style>
+    <style name="res_2131558475_base_theme_appcompat_light_dialogwhenlarge" parent="@style/res_2131558659_theme_appcompat_light">
+    </style>
+    <style name="res_2131558476_base_themeoverlay_appcompat" parent="@style/res_2131558565_platform_themeoverlay_appcompat">
+    </style>
+    <style name="res_2131558477_base_themeoverlay_appcompat_actionbar" parent="@style/res_2131558476_base_themeoverlay_appcompat">
+        <item name="colorControlNormal">?android:attr/textColorPrimary</item>
+        <item name="searchViewStyle">@style/res_2131558738_widget_appcompat_searchview_actionbar</item>
+    </style>
+    <style name="res_2131558478_base_themeoverlay_appcompat_dark" parent="@style/res_2131558566_platform_themeoverlay_appcompat_dark">
+        <item name="android:colorForeground">@color/foreground_material_dark</item>
+        <item name="android:colorBackground">@color/background_material_dark</item>
+        <item name="android:textColorPrimary">@color/abc_primary_text_material_dark</item>
+        <item name="android:textColorPrimaryDisableOnly">@color/abc_primary_text_disable_only_material_dark</item>
+        <item name="android:textColorSecondary">@color/abc_secondary_text_material_dark</item>
+        <item name="android:textColorPrimaryInverse">@color/abc_primary_text_material_light</item>
+        <item name="android:textColorSecondaryInverse">@color/abc_secondary_text_material_light</item>
+        <item name="android:textColorHintInverse">@color/abc_hint_foreground_material_light</item>
+        <item name="android:windowBackground">@color/background_material_dark</item>
+        <item name="android:textColorHighlight">@color/highlighted_text_material_dark</item>
+        <item name="android:textColorHint">@color/abc_hint_foreground_material_dark</item>
+        <item name="android:colorForegroundInverse">@color/foreground_material_light</item>
+        <item name="android:textColorTertiary">@color/abc_secondary_text_material_dark</item>
+        <item name="android:textColorTertiaryInverse">@color/abc_secondary_text_material_light</item>
+        <item name="android:colorBackgroundCacheHint">@color/abc_background_cache_hint_selector_material_dark</item>
+        <item name="colorBackgroundFloating">@color/background_floating_material_dark</item>
+        <item name="colorButtonNormal">@color/button_material_dark</item>
+        <item name="colorControlHighlight">@color/ripple_material_dark</item>
+        <item name="colorControlNormal">?android:attr/textColorSecondary</item>
+        <item name="colorSwitchThumbNormal">@color/switch_thumb_material_dark</item>
+        <item name="isLightTheme">false</item>
+    </style>
+    <style name="res_2131558479_base_themeoverlay_appcompat_dark_actionbar" parent="@style/res_2131558478_base_themeoverlay_appcompat_dark">
+        <item name="colorControlNormal">?android:attr/textColorPrimary</item>
+        <item name="searchViewStyle">@style/res_2131558738_widget_appcompat_searchview_actionbar</item>
+    </style>
+    <style name="res_2131558480_base_themeoverlay_appcompat_dialog" parent="@style/res_2131558487_base_v21_themeoverlay_appcompat_dialog">
+    </style>
+    <style name="res_2131558481_base_themeoverlay_appcompat_dialog_alert" parent="@style/res_2131558480_base_themeoverlay_appcompat_dialog">
+        <item name="android:windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
+        <item name="android:windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
+    </style>
+    <style name="res_2131558482_base_themeoverlay_appcompat_light" parent="@style/res_2131558567_platform_themeoverlay_appcompat_light">
+        <item name="android:colorForeground">@color/foreground_material_light</item>
+        <item name="android:colorBackground">@color/background_material_light</item>
+        <item name="android:textColorPrimary">@color/abc_primary_text_material_light</item>
+        <item name="android:textColorPrimaryDisableOnly">@color/abc_primary_text_disable_only_material_light</item>
+        <item name="android:textColorSecondary">@color/abc_secondary_text_material_light</item>
+        <item name="android:textColorPrimaryInverse">@color/abc_primary_text_material_dark</item>
+        <item name="android:textColorSecondaryInverse">@color/abc_secondary_text_material_dark</item>
+        <item name="android:textColorHintInverse">@color/abc_hint_foreground_material_dark</item>
+        <item name="android:windowBackground">@color/background_material_light</item>
+        <item name="android:textColorHighlight">@color/highlighted_text_material_light</item>
+        <item name="android:textColorHint">@color/abc_hint_foreground_material_light</item>
+        <item name="android:colorForegroundInverse">@color/foreground_material_dark</item>
+        <item name="android:textColorTertiary">@color/abc_secondary_text_material_light</item>
+        <item name="android:textColorTertiaryInverse">@color/abc_secondary_text_material_dark</item>
+        <item name="android:textColorPrimaryInverseDisableOnly">@color/abc_primary_text_disable_only_material_dark</item>
+        <item name="android:colorBackgroundCacheHint">@color/abc_background_cache_hint_selector_material_light</item>
+        <item name="colorBackgroundFloating">@color/background_floating_material_light</item>
+        <item name="colorButtonNormal">@color/button_material_light</item>
+        <item name="colorControlHighlight">@color/ripple_material_light</item>
+        <item name="colorControlNormal">?android:attr/textColorSecondary</item>
+        <item name="colorSwitchThumbNormal">@color/switch_thumb_material_light</item>
+        <item name="isLightTheme">true</item>
+    </style>
+    <style name="res_2131558483_base_v21_theme_appcompat" parent="@style/res_2131558497_base_v7_theme_appcompat">
+        <item name="android:colorControlNormal">?attr/colorControlNormal</item>
+        <item name="android:colorControlActivated">?attr/colorControlActivated</item>
+        <item name="android:colorButtonNormal">?attr/colorButtonNormal</item>
+        <item name="android:colorControlHighlight">?attr/colorControlHighlight</item>
+        <item name="android:colorPrimary">?attr/colorPrimary</item>
+        <item name="android:colorPrimaryDark">?attr/colorPrimaryDark</item>
+        <item name="android:colorAccent">?attr/colorAccent</item>
+        <item name="actionBarDivider">?android:attr/actionBarDivider</item>
+        <item name="actionBarItemBackground">@drawable/abc_action_bar_item_background_material</item>
+        <item name="actionBarSize">?android:attr/actionBarSize</item>
+        <item name="actionButtonStyle">?android:attr/actionButtonStyle</item>
+        <item name="actionModeBackground">?android:attr/actionModeBackground</item>
+        <item name="actionModeCloseDrawable">?android:attr/actionModeCloseDrawable</item>
+        <item name="borderlessButtonStyle">?android:attr/borderlessButtonStyle</item>
+        <item name="buttonStyle">?android:attr/buttonStyle</item>
+        <item name="buttonStyleSmall">?android:attr/buttonStyleSmall</item>
+        <item name="checkboxStyle">?android:attr/checkboxStyle</item>
+        <item name="checkedTextViewStyle">?android:attr/checkedTextViewStyle</item>
+        <item name="dividerHorizontal">?android:attr/dividerHorizontal</item>
+        <item name="dividerVertical">?android:attr/dividerVertical</item>
+        <item name="editTextBackground">@drawable/abc_edit_text_material</item>
+        <item name="editTextColor">?android:attr/editTextColor</item>
+        <item name="homeAsUpIndicator">?android:attr/homeAsUpIndicator</item>
+        <item name="listChoiceBackgroundIndicator">?android:attr/listChoiceBackgroundIndicator</item>
+        <item name="listPreferredItemHeightSmall">?android:attr/listPreferredItemHeightSmall</item>
+        <item name="radioButtonStyle">?android:attr/radioButtonStyle</item>
+        <item name="ratingBarStyle">?android:attr/ratingBarStyle</item>
+        <item name="selectableItemBackground">?android:attr/selectableItemBackground</item>
+        <item name="selectableItemBackgroundBorderless">?android:attr/selectableItemBackgroundBorderless</item>
+        <item name="spinnerStyle">?android:attr/spinnerStyle</item>
+        <item name="textAppearanceLargePopupMenu">?android:attr/textAppearanceLargePopupMenu</item>
+        <item name="textAppearanceSmallPopupMenu">?android:attr/textAppearanceSmallPopupMenu</item>
+    </style>
+    <style name="res_2131558484_base_v21_theme_appcompat_dialog" parent="@style/res_2131558498_base_v7_theme_appcompat_dialog">
+        <item name="android:windowElevation">@dimen/abc_floating_window_z</item>
+    </style>
+    <style name="res_2131558485_base_v21_theme_appcompat_light" parent="@style/res_2131558499_base_v7_theme_appcompat_light">
+        <item name="android:colorControlNormal">?attr/colorControlNormal</item>
+        <item name="android:colorControlActivated">?attr/colorControlActivated</item>
+        <item name="android:colorButtonNormal">?attr/colorButtonNormal</item>
+        <item name="android:colorControlHighlight">?attr/colorControlHighlight</item>
+        <item name="android:colorPrimary">?attr/colorPrimary</item>
+        <item name="android:colorPrimaryDark">?attr/colorPrimaryDark</item>
+        <item name="android:colorAccent">?attr/colorAccent</item>
+        <item name="actionBarDivider">?android:attr/actionBarDivider</item>
+        <item name="actionBarItemBackground">@drawable/abc_action_bar_item_background_material</item>
+        <item name="actionBarSize">?android:attr/actionBarSize</item>
+        <item name="actionButtonStyle">?android:attr/actionButtonStyle</item>
+        <item name="actionModeBackground">?android:attr/actionModeBackground</item>
+        <item name="actionModeCloseDrawable">?android:attr/actionModeCloseDrawable</item>
+        <item name="borderlessButtonStyle">?android:attr/borderlessButtonStyle</item>
+        <item name="buttonStyle">?android:attr/buttonStyle</item>
+        <item name="buttonStyleSmall">?android:attr/buttonStyleSmall</item>
+        <item name="checkboxStyle">?android:attr/checkboxStyle</item>
+        <item name="checkedTextViewStyle">?android:attr/checkedTextViewStyle</item>
+        <item name="dividerHorizontal">?android:attr/dividerHorizontal</item>
+        <item name="dividerVertical">?android:attr/dividerVertical</item>
+        <item name="editTextBackground">@drawable/abc_edit_text_material</item>
+        <item name="editTextColor">?android:attr/editTextColor</item>
+        <item name="homeAsUpIndicator">?android:attr/homeAsUpIndicator</item>
+        <item name="listChoiceBackgroundIndicator">?android:attr/listChoiceBackgroundIndicator</item>
+        <item name="listPreferredItemHeightSmall">?android:attr/listPreferredItemHeightSmall</item>
+        <item name="radioButtonStyle">?android:attr/radioButtonStyle</item>
+        <item name="ratingBarStyle">?android:attr/ratingBarStyle</item>
+        <item name="selectableItemBackground">?android:attr/selectableItemBackground</item>
+        <item name="selectableItemBackgroundBorderless">?android:attr/selectableItemBackgroundBorderless</item>
+        <item name="spinnerStyle">?android:attr/spinnerStyle</item>
+        <item name="textAppearanceLargePopupMenu">?android:attr/textAppearanceLargePopupMenu</item>
+        <item name="textAppearanceSmallPopupMenu">?android:attr/textAppearanceSmallPopupMenu</item>
+    </style>
+    <style name="res_2131558486_base_v21_theme_appcompat_light_dialog" parent="@style/res_2131558500_base_v7_theme_appcompat_light_dialog">
+        <item name="android:windowElevation">@dimen/abc_floating_window_z</item>
+    </style>
+    <style name="res_2131558487_base_v21_themeoverlay_appcompat_dialog" parent="@style/res_2131558501_base_v7_themeoverlay_appcompat_dialog">
+        <item name="android:windowElevation">@dimen/abc_floating_window_z</item>
+    </style>
+    <style name="res_2131558497_base_v7_theme_appcompat" parent="@style/res_2131558563_platform_appcompat">
+        <item name="android:panelBackground">@android:color/transparent</item>
+        <item name="android:dropDownListViewStyle">@style/res_2131558727_widget_appcompat_listview_dropdown</item>
+        <item name="android:textViewStyle">@style/res_2131558745_widget_appcompat_textview</item>
+        <item name="android:dropDownItemStyle">@style/res_2131558699_widget_appcompat_dropdownitem_spinner</item>
+        <item name="android:spinnerItemStyle">@style/res_2131558746_widget_appcompat_textview_spinneritem</item>
+        <item name="android:textAppearanceButton">@style/res_2131558628_textappearance_appcompat_widget_button</item>
+        <item name="actionBarDivider">?attr/dividerVertical</item>
+        <item name="actionBarItemBackground">?attr/selectableItemBackgroundBorderless</item>
+        <item name="actionBarPopupTheme">@null</item>
+        <item name="actionBarSize">@dimen/abc_action_bar_default_height_material</item>
+        <item name="actionBarSplitStyle">?attr/actionBarStyle</item>
+        <item name="actionBarStyle">@style/res_2131558677_widget_appcompat_actionbar_solid</item>
+        <item name="actionBarTabBarStyle">@style/res_2131558678_widget_appcompat_actionbar_tabbar</item>
+        <item name="actionBarTabStyle">@style/res_2131558680_widget_appcompat_actionbar_tabview</item>
+        <item name="actionBarTabTextStyle">@style/res_2131558679_widget_appcompat_actionbar_tabtext</item>
+        <item name="actionBarTheme">@style/res_2131558668_themeoverlay_appcompat_actionbar</item>
+        <item name="actionBarWidgetTheme">@null</item>
+        <item name="actionButtonStyle">@style/res_2131558681_widget_appcompat_actionbutton</item>
+        <item name="actionDropDownStyle">@style/res_2131558743_widget_appcompat_spinner_dropdown_actionbar</item>
+        <item name="actionMenuTextAppearance">@style/res_2131558619_textappearance_appcompat_widget_actionbar_menu</item>
+        <item name="actionMenuTextColor">?android:attr/textColorPrimaryDisableOnly</item>
+        <item name="actionModeBackground">@drawable/abc_cab_background_top_material</item>
+        <item name="actionModeCloseButtonStyle">@style/res_2131558682_widget_appcompat_actionbutton_closemode</item>
+        <item name="actionModeCloseDrawable">@drawable/abc_ic_ab_back_material</item>
+        <item name="actionModeCopyDrawable">@drawable/abc_ic_menu_copy_mtrl_am_alpha</item>
+        <item name="actionModeCutDrawable">@drawable/abc_ic_menu_cut_mtrl_alpha</item>
+        <item name="actionModePasteDrawable">@drawable/abc_ic_menu_paste_mtrl_am_alpha</item>
+        <item name="actionModeSelectAllDrawable">@drawable/abc_ic_menu_selectall_mtrl_alpha</item>
+        <item name="actionModeShareDrawable">@drawable/abc_ic_menu_share_mtrl_alpha</item>
+        <item name="actionModeSplitBackground">?attr/colorPrimaryDark</item>
+        <item name="actionModeStyle">@style/res_2131558684_widget_appcompat_actionmode</item>
+        <item name="actionOverflowButtonStyle">@style/res_2131558683_widget_appcompat_actionbutton_overflow</item>
+        <item name="actionOverflowMenuStyle">@style/res_2131558730_widget_appcompat_popupmenu_overflow</item>
+        <item name="activityChooserViewStyle">@style/res_2131558685_widget_appcompat_activitychooserview</item>
+        <item name="alertDialogCenterButtons">false</item>
+        <item name="alertDialogStyle">@style/res_2131558400_alertdialog_appcompat</item>
+        <item name="alertDialogTheme">@style/res_2131558674_themeoverlay_appcompat_dialog_alert</item>
+        <item name="autoCompleteTextViewStyle">@style/res_2131558686_widget_appcompat_autocompletetextview</item>
+        <item name="borderlessButtonStyle">@style/res_2131558688_widget_appcompat_button_borderless</item>
+        <item name="buttonBarButtonStyle">@style/res_2131558690_widget_appcompat_button_buttonbar_alertdialog</item>
+        <item name="buttonBarNegativeButtonStyle">?attr/buttonBarButtonStyle</item>
+        <item name="buttonBarNeutralButtonStyle">?attr/buttonBarButtonStyle</item>
+        <item name="buttonBarPositiveButtonStyle">?attr/buttonBarButtonStyle</item>
+        <item name="buttonBarStyle">@style/res_2131558693_widget_appcompat_buttonbar</item>
+        <item name="buttonStyle">@style/res_2131558687_widget_appcompat_button</item>
+        <item name="buttonStyleSmall">@style/res_2131558692_widget_appcompat_button_small</item>
+        <item name="checkboxStyle">@style/res_2131558695_widget_appcompat_compoundbutton_checkbox</item>
+        <item name="colorAccent">@color/accent_material_dark</item>
+        <item name="colorBackgroundFloating">@color/background_floating_material_dark</item>
+        <item name="colorButtonNormal">@color/button_material_dark</item>
+        <item name="colorControlActivated">?attr/colorAccent</item>
+        <item name="colorControlHighlight">@color/ripple_material_dark</item>
+        <item name="colorControlNormal">?android:attr/textColorSecondary</item>
+        <item name="colorError">@color/error_color_material_dark</item>
+        <item name="colorPrimary">@color/primary_material_dark</item>
+        <item name="colorPrimaryDark">@color/primary_dark_material_dark</item>
+        <item name="colorSwitchThumbNormal">@color/switch_thumb_material_dark</item>
+        <item name="controlBackground">?attr/selectableItemBackgroundBorderless</item>
+        <item name="dialogCornerRadius">@dimen/abc_dialog_corner_radius_material</item>
+        <item name="dialogPreferredPadding">@dimen/abc_dialog_padding_material</item>
+        <item name="dialogTheme">@style/res_2131558673_themeoverlay_appcompat_dialog</item>
+        <item name="dividerHorizontal">@drawable/abc_list_divider_mtrl_alpha</item>
+        <item name="dividerVertical">@drawable/abc_list_divider_mtrl_alpha</item>
+        <item name="drawerArrowStyle">@style/res_2131558698_widget_appcompat_drawerarrowtoggle</item>
+        <item name="dropDownListViewStyle">?android:attr/dropDownListViewStyle</item>
+        <item name="dropdownListPreferredItemHeight">?attr/listPreferredItemHeightSmall</item>
+        <item name="editTextBackground">@drawable/abc_edit_text_material</item>
+        <item name="editTextColor">?android:attr/textColorPrimary</item>
+        <item name="editTextStyle">@style/res_2131558700_widget_appcompat_edittext</item>
+        <item name="homeAsUpIndicator">@drawable/abc_ic_ab_back_material</item>
+        <item name="imageButtonStyle">@style/res_2131558701_widget_appcompat_imagebutton</item>
+        <item name="isLightTheme">false</item>
+        <item name="listChoiceBackgroundIndicator">@drawable/abc_list_selector_holo_dark</item>
+        <item name="listDividerAlertDialog">@null</item>
+        <item name="listMenuViewStyle">@style/res_2131558724_widget_appcompat_listmenuview</item>
+        <item name="listPopupWindowStyle">@style/res_2131558725_widget_appcompat_listpopupwindow</item>
+        <item name="listPreferredItemHeight">@dimen/abc_list_item_height_material</item>
+        <item name="listPreferredItemHeightLarge">@dimen/abc_list_item_height_large_material</item>
+        <item name="listPreferredItemHeightSmall">@dimen/abc_list_item_height_small_material</item>
+        <item name="listPreferredItemPaddingEnd">@dimen/abc_list_item_padding_horizontal_material</item>
+        <item name="listPreferredItemPaddingLeft">@dimen/abc_list_item_padding_horizontal_material</item>
+        <item name="listPreferredItemPaddingRight">@dimen/abc_list_item_padding_horizontal_material</item>
+        <item name="listPreferredItemPaddingStart">@dimen/abc_list_item_padding_horizontal_material</item>
+        <item name="panelBackground">@drawable/abc_menu_hardkey_panel_mtrl_mult</item>
+        <item name="panelMenuListTheme">@style/res_2131558647_theme_appcompat_compactmenu</item>
+        <item name="panelMenuListWidth">@dimen/abc_panel_menu_list_width</item>
+        <item name="popupMenuStyle">@style/res_2131558729_widget_appcompat_popupmenu</item>
+        <item name="radioButtonStyle">@style/res_2131558696_widget_appcompat_compoundbutton_radiobutton</item>
+        <item name="ratingBarStyle">@style/res_2131558734_widget_appcompat_ratingbar</item>
+        <item name="ratingBarStyleIndicator">@style/res_2131558735_widget_appcompat_ratingbar_indicator</item>
+        <item name="ratingBarStyleSmall">@style/res_2131558736_widget_appcompat_ratingbar_small</item>
+        <item name="searchViewStyle">@style/res_2131558737_widget_appcompat_searchview</item>
+        <item name="seekBarStyle">@style/res_2131558739_widget_appcompat_seekbar</item>
+        <item name="selectableItemBackground">@drawable/abc_item_background_holo_dark</item>
+        <item name="selectableItemBackgroundBorderless">?attr/selectableItemBackground</item>
+        <item name="spinnerDropDownItemStyle">@style/res_2131558699_widget_appcompat_dropdownitem_spinner</item>
+        <item name="spinnerStyle">@style/res_2131558741_widget_appcompat_spinner</item>
+        <item name="switchStyle">@style/res_2131558697_widget_appcompat_compoundbutton_switch</item>
+        <item name="textAppearanceLargePopupMenu">@style/res_2131558634_textappearance_appcompat_widget_popupmenu_large</item>
+        <item name="textAppearanceListItem">@style/res_2131558614_textappearance_appcompat_subhead</item>
+        <item name="textAppearanceListItemSecondary">@style/res_2131558591_textappearance_appcompat_body1</item>
+        <item name="textAppearanceListItemSmall">@style/res_2131558614_textappearance_appcompat_subhead</item>
+        <item name="textAppearancePopupMenuHeader">@style/res_2131558633_textappearance_appcompat_widget_popupmenu_header</item>
+        <item name="textAppearanceSearchResultSubtitle">@style/res_2131558610_textappearance_appcompat_searchresult_subtitle</item>
+        <item name="textAppearanceSearchResultTitle">@style/res_2131558611_textappearance_appcompat_searchresult_title</item>
+        <item name="textAppearanceSmallPopupMenu">@style/res_2131558635_textappearance_appcompat_widget_popupmenu_small</item>
+        <item name="textColorAlertDialogListItem">@color/abc_primary_text_material_dark</item>
+        <item name="textColorSearchUrl">@color/abc_search_url_text</item>
+        <item name="toolbarNavigationButtonStyle">@style/res_2131558748_widget_appcompat_toolbar_button_navigation</item>
+        <item name="toolbarStyle">@style/res_2131558747_widget_appcompat_toolbar</item>
+        <item name="tooltipForegroundColor">@color/foreground_material_light</item>
+        <item name="tooltipFrameBackground">@drawable/tooltip_frame_light</item>
+        <item name="viewInflaterClass">androidx.appcompat.app.AppCompatViewInflater</item>
+        <item name="windowActionBar">true</item>
+        <item name="windowActionBarOverlay">false</item>
+        <item name="windowActionModeOverlay">false</item>
+        <item name="windowFixedHeightMajor">@null</item>
+        <item name="windowFixedHeightMinor">@null</item>
+        <item name="windowFixedWidthMajor">@null</item>
+        <item name="windowFixedWidthMinor">@null</item>
+        <item name="windowNoTitle">false</item>
+    </style>
+    <style name="res_2131558498_base_v7_theme_appcompat_dialog" parent="@style/res_2131558462_base_theme_appcompat">
+        <item name="android:colorBackground">?attr/colorBackgroundFloating</item>
+        <item name="android:windowBackground">@drawable/abc_dialog_material_background</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTitleStyle">@style/res_2131558573_rtloverlay_dialogwindowtitle_appcompat</item>
+        <item name="android:windowTitleBackgroundStyle">@style/res_2131558413_base_dialogwindowtitlebackground_appcompat</item>
+        <item name="android:windowAnimationStyle">@style/res_2131558402_animation_appcompat_dialog</item>
+        <item name="android:listDivider">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowSoftInputMode">adjustUnspecified|stateVisible|adjustResize</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:borderlessButtonStyle">@style/res_2131558688_widget_appcompat_button_borderless</item>
+        <item name="android:buttonBarStyle">@style/res_2131558694_widget_appcompat_buttonbar_alertdialog</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="listPreferredItemPaddingLeft">24dp</item>
+        <item name="listPreferredItemPaddingRight">24dp</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowActionModeOverlay">true</item>
+    </style>
+    <style name="res_2131558499_base_v7_theme_appcompat_light" parent="@style/res_2131558564_platform_appcompat_light">
+        <item name="android:panelBackground">@android:color/transparent</item>
+        <item name="android:dropDownListViewStyle">@style/res_2131558727_widget_appcompat_listview_dropdown</item>
+        <item name="android:textViewStyle">@style/res_2131558745_widget_appcompat_textview</item>
+        <item name="android:dropDownItemStyle">@style/res_2131558699_widget_appcompat_dropdownitem_spinner</item>
+        <item name="android:spinnerItemStyle">@style/res_2131558746_widget_appcompat_textview_spinneritem</item>
+        <item name="android:textAppearanceButton">@style/res_2131558628_textappearance_appcompat_widget_button</item>
+        <item name="actionBarDivider">?attr/dividerVertical</item>
+        <item name="actionBarItemBackground">?attr/selectableItemBackgroundBorderless</item>
+        <item name="actionBarPopupTheme">@null</item>
+        <item name="actionBarSize">@dimen/abc_action_bar_default_height_material</item>
+        <item name="actionBarSplitStyle">?attr/actionBarStyle</item>
+        <item name="actionBarStyle">@style/res_2131558703_widget_appcompat_light_actionbar_solid</item>
+        <item name="actionBarTabBarStyle">@style/res_2131558705_widget_appcompat_light_actionbar_tabbar</item>
+        <item name="actionBarTabStyle">@style/res_2131558709_widget_appcompat_light_actionbar_tabview</item>
+        <item name="actionBarTabTextStyle">@style/res_2131558707_widget_appcompat_light_actionbar_tabtext</item>
+        <item name="actionBarTheme">@style/res_2131558668_themeoverlay_appcompat_actionbar</item>
+        <item name="actionBarWidgetTheme">@null</item>
+        <item name="actionButtonStyle">@style/res_2131558711_widget_appcompat_light_actionbutton</item>
+        <item name="actionDropDownStyle">@style/res_2131558723_widget_appcompat_light_spinner_dropdown_actionbar</item>
+        <item name="actionMenuTextAppearance">@style/res_2131558619_textappearance_appcompat_widget_actionbar_menu</item>
+        <item name="actionMenuTextColor">?android:attr/textColorPrimaryDisableOnly</item>
+        <item name="actionModeBackground">@drawable/abc_cab_background_top_material</item>
+        <item name="actionModeCloseButtonStyle">@style/res_2131558682_widget_appcompat_actionbutton_closemode</item>
+        <item name="actionModeCloseDrawable">@drawable/abc_ic_ab_back_material</item>
+        <item name="actionModeCopyDrawable">@drawable/abc_ic_menu_copy_mtrl_am_alpha</item>
+        <item name="actionModeCutDrawable">@drawable/abc_ic_menu_cut_mtrl_alpha</item>
+        <item name="actionModePasteDrawable">@drawable/abc_ic_menu_paste_mtrl_am_alpha</item>
+        <item name="actionModeSelectAllDrawable">@drawable/abc_ic_menu_selectall_mtrl_alpha</item>
+        <item name="actionModeShareDrawable">@drawable/abc_ic_menu_share_mtrl_alpha</item>
+        <item name="actionModeSplitBackground">?attr/colorPrimaryDark</item>
+        <item name="actionModeStyle">@style/res_2131558684_widget_appcompat_actionmode</item>
+        <item name="actionOverflowButtonStyle">@style/res_2131558713_widget_appcompat_light_actionbutton_overflow</item>
+        <item name="actionOverflowMenuStyle">@style/res_2131558721_widget_appcompat_light_popupmenu_overflow</item>
+        <item name="activityChooserViewStyle">@style/res_2131558685_widget_appcompat_activitychooserview</item>
+        <item name="alertDialogCenterButtons">false</item>
+        <item name="alertDialogStyle">@style/res_2131558401_alertdialog_appcompat_light</item>
+        <item name="alertDialogTheme">@style/res_2131558674_themeoverlay_appcompat_dialog_alert</item>
+        <item name="autoCompleteTextViewStyle">@style/res_2131558686_widget_appcompat_autocompletetextview</item>
+        <item name="borderlessButtonStyle">@style/res_2131558688_widget_appcompat_button_borderless</item>
+        <item name="buttonBarButtonStyle">@style/res_2131558690_widget_appcompat_button_buttonbar_alertdialog</item>
+        <item name="buttonBarNegativeButtonStyle">?attr/buttonBarButtonStyle</item>
+        <item name="buttonBarNeutralButtonStyle">?attr/buttonBarButtonStyle</item>
+        <item name="buttonBarPositiveButtonStyle">?attr/buttonBarButtonStyle</item>
+        <item name="buttonBarStyle">@style/res_2131558693_widget_appcompat_buttonbar</item>
+        <item name="buttonStyle">@style/res_2131558687_widget_appcompat_button</item>
+        <item name="buttonStyleSmall">@style/res_2131558692_widget_appcompat_button_small</item>
+        <item name="checkboxStyle">@style/res_2131558695_widget_appcompat_compoundbutton_checkbox</item>
+        <item name="colorAccent">@color/accent_material_light</item>
+        <item name="colorBackgroundFloating">@color/background_floating_material_light</item>
+        <item name="colorButtonNormal">@color/button_material_light</item>
+        <item name="colorControlActivated">?attr/colorAccent</item>
+        <item name="colorControlHighlight">@color/ripple_material_light</item>
+        <item name="colorControlNormal">?android:attr/textColorSecondary</item>
+        <item name="colorError">@color/error_color_material_light</item>
+        <item name="colorPrimary">@color/primary_material_light</item>
+        <item name="colorPrimaryDark">@color/primary_dark_material_light</item>
+        <item name="colorSwitchThumbNormal">@color/switch_thumb_material_light</item>
+        <item name="controlBackground">?attr/selectableItemBackgroundBorderless</item>
+        <item name="dialogCornerRadius">@dimen/abc_dialog_corner_radius_material</item>
+        <item name="dialogPreferredPadding">@dimen/abc_dialog_padding_material</item>
+        <item name="dialogTheme">@style/res_2131558673_themeoverlay_appcompat_dialog</item>
+        <item name="dividerHorizontal">@drawable/abc_list_divider_mtrl_alpha</item>
+        <item name="dividerVertical">@drawable/abc_list_divider_mtrl_alpha</item>
+        <item name="drawerArrowStyle">@style/res_2131558698_widget_appcompat_drawerarrowtoggle</item>
+        <item name="dropDownListViewStyle">?android:attr/dropDownListViewStyle</item>
+        <item name="dropdownListPreferredItemHeight">?attr/listPreferredItemHeightSmall</item>
+        <item name="editTextBackground">@drawable/abc_edit_text_material</item>
+        <item name="editTextColor">?android:attr/textColorPrimary</item>
+        <item name="editTextStyle">@style/res_2131558700_widget_appcompat_edittext</item>
+        <item name="homeAsUpIndicator">@drawable/abc_ic_ab_back_material</item>
+        <item name="imageButtonStyle">@style/res_2131558701_widget_appcompat_imagebutton</item>
+        <item name="isLightTheme">true</item>
+        <item name="listChoiceBackgroundIndicator">@drawable/abc_list_selector_holo_light</item>
+        <item name="listDividerAlertDialog">@null</item>
+        <item name="listMenuViewStyle">@style/res_2131558724_widget_appcompat_listmenuview</item>
+        <item name="listPopupWindowStyle">@style/res_2131558725_widget_appcompat_listpopupwindow</item>
+        <item name="listPreferredItemHeight">@dimen/abc_list_item_height_material</item>
+        <item name="listPreferredItemHeightLarge">@dimen/abc_list_item_height_large_material</item>
+        <item name="listPreferredItemHeightSmall">@dimen/abc_list_item_height_small_material</item>
+        <item name="listPreferredItemPaddingEnd">@dimen/abc_list_item_padding_horizontal_material</item>
+        <item name="listPreferredItemPaddingLeft">@dimen/abc_list_item_padding_horizontal_material</item>
+        <item name="listPreferredItemPaddingRight">@dimen/abc_list_item_padding_horizontal_material</item>
+        <item name="listPreferredItemPaddingStart">@dimen/abc_list_item_padding_horizontal_material</item>
+        <item name="panelBackground">@drawable/abc_menu_hardkey_panel_mtrl_mult</item>
+        <item name="panelMenuListTheme">@style/res_2131558647_theme_appcompat_compactmenu</item>
+        <item name="panelMenuListWidth">@dimen/abc_panel_menu_list_width</item>
+        <item name="popupMenuStyle">@style/res_2131558720_widget_appcompat_light_popupmenu</item>
+        <item name="radioButtonStyle">@style/res_2131558696_widget_appcompat_compoundbutton_radiobutton</item>
+        <item name="ratingBarStyle">@style/res_2131558734_widget_appcompat_ratingbar</item>
+        <item name="ratingBarStyleIndicator">@style/res_2131558735_widget_appcompat_ratingbar_indicator</item>
+        <item name="ratingBarStyleSmall">@style/res_2131558736_widget_appcompat_ratingbar_small</item>
+        <item name="searchViewStyle">@style/res_2131558722_widget_appcompat_light_searchview</item>
+        <item name="seekBarStyle">@style/res_2131558739_widget_appcompat_seekbar</item>
+        <item name="selectableItemBackground">@drawable/abc_item_background_holo_light</item>
+        <item name="selectableItemBackgroundBorderless">?attr/selectableItemBackground</item>
+        <item name="spinnerDropDownItemStyle">@style/res_2131558699_widget_appcompat_dropdownitem_spinner</item>
+        <item name="spinnerStyle">@style/res_2131558741_widget_appcompat_spinner</item>
+        <item name="switchStyle">@style/res_2131558697_widget_appcompat_compoundbutton_switch</item>
+        <item name="textAppearanceLargePopupMenu">@style/res_2131558605_textappearance_appcompat_light_widget_popupmenu_large</item>
+        <item name="textAppearanceListItem">@style/res_2131558614_textappearance_appcompat_subhead</item>
+        <item name="textAppearanceListItemSecondary">@style/res_2131558591_textappearance_appcompat_body1</item>
+        <item name="textAppearanceListItemSmall">@style/res_2131558614_textappearance_appcompat_subhead</item>
+        <item name="textAppearancePopupMenuHeader">@style/res_2131558633_textappearance_appcompat_widget_popupmenu_header</item>
+        <item name="textAppearanceSearchResultSubtitle">@style/res_2131558610_textappearance_appcompat_searchresult_subtitle</item>
+        <item name="textAppearanceSearchResultTitle">@style/res_2131558611_textappearance_appcompat_searchresult_title</item>
+        <item name="textAppearanceSmallPopupMenu">@style/res_2131558606_textappearance_appcompat_light_widget_popupmenu_small</item>
+        <item name="textColorAlertDialogListItem">@color/abc_primary_text_material_light</item>
+        <item name="textColorSearchUrl">@color/abc_search_url_text</item>
+        <item name="toolbarNavigationButtonStyle">@style/res_2131558748_widget_appcompat_toolbar_button_navigation</item>
+        <item name="toolbarStyle">@style/res_2131558747_widget_appcompat_toolbar</item>
+        <item name="tooltipForegroundColor">@color/foreground_material_dark</item>
+        <item name="tooltipFrameBackground">@drawable/tooltip_frame_dark</item>
+        <item name="viewInflaterClass">androidx.appcompat.app.AppCompatViewInflater</item>
+        <item name="windowActionBar">true</item>
+        <item name="windowActionBarOverlay">false</item>
+        <item name="windowActionModeOverlay">false</item>
+        <item name="windowFixedHeightMajor">@null</item>
+        <item name="windowFixedHeightMinor">@null</item>
+        <item name="windowFixedWidthMajor">@null</item>
+        <item name="windowFixedWidthMinor">@null</item>
+        <item name="windowNoTitle">false</item>
+    </style>
+    <style name="res_2131558500_base_v7_theme_appcompat_light_dialog" parent="@style/res_2131558469_base_theme_appcompat_light">
+        <item name="android:colorBackground">?attr/colorBackgroundFloating</item>
+        <item name="android:windowBackground">@drawable/abc_dialog_material_background</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTitleStyle">@style/res_2131558573_rtloverlay_dialogwindowtitle_appcompat</item>
+        <item name="android:windowTitleBackgroundStyle">@style/res_2131558413_base_dialogwindowtitlebackground_appcompat</item>
+        <item name="android:windowAnimationStyle">@style/res_2131558402_animation_appcompat_dialog</item>
+        <item name="android:listDivider">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowSoftInputMode">adjustUnspecified|stateVisible|adjustResize</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:borderlessButtonStyle">@style/res_2131558688_widget_appcompat_button_borderless</item>
+        <item name="android:buttonBarStyle">@style/res_2131558694_widget_appcompat_buttonbar_alertdialog</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="listPreferredItemPaddingLeft">24dp</item>
+        <item name="listPreferredItemPaddingRight">24dp</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowActionModeOverlay">true</item>
+    </style>
+    <style name="res_2131558501_base_v7_themeoverlay_appcompat_dialog" parent="@style/res_2131558476_base_themeoverlay_appcompat">
+        <item name="android:colorBackground">?attr/colorBackgroundFloating</item>
+        <item name="android:windowBackground">@drawable/abc_dialog_material_background</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTitleStyle">@style/res_2131558573_rtloverlay_dialogwindowtitle_appcompat</item>
+        <item name="android:windowTitleBackgroundStyle">@style/res_2131558413_base_dialogwindowtitlebackground_appcompat</item>
+        <item name="android:windowAnimationStyle">@style/res_2131558402_animation_appcompat_dialog</item>
+        <item name="android:listDivider">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowSoftInputMode">adjustUnspecified|stateVisible|adjustResize</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:borderlessButtonStyle">@style/res_2131558688_widget_appcompat_button_borderless</item>
+        <item name="android:buttonBarStyle">@style/res_2131558694_widget_appcompat_buttonbar_alertdialog</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="listPreferredItemPaddingLeft">24dp</item>
+        <item name="listPreferredItemPaddingRight">24dp</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="windowFixedHeightMajor">@null</item>
+        <item name="windowFixedHeightMinor">@null</item>
+        <item name="windowFixedWidthMajor">@null</item>
+        <item name="windowFixedWidthMinor">@null</item>
+    </style>
+    <style name="res_2131558502_base_v7_widget_appcompat_autocompletetextview" parent="@android:style/Widget.AutoCompleteTextView">
+        <item name="android:textAppearance">?android:attr/textAppearanceMediumInverse</item>
+        <item name="android:textColor">?attr/editTextColor</item>
+        <item name="android:background">?attr/editTextBackground</item>
+        <item name="android:dropDownSelector">?attr/listChoiceBackgroundIndicator</item>
+        <item name="android:popupBackground">@drawable/abc_popup_background_mtrl_mult</item>
+        <item name="android:textCursorDrawable">@drawable/abc_text_cursor_material</item>
+    </style>
+    <style name="res_2131558503_base_v7_widget_appcompat_edittext" parent="@android:style/Widget.EditText">
+        <item name="android:textAppearance">?android:attr/textAppearanceMediumInverse</item>
+        <item name="android:textColor">?attr/editTextColor</item>
+        <item name="android:background">?attr/editTextBackground</item>
+        <item name="android:textCursorDrawable">@drawable/abc_text_cursor_material</item>
+    </style>
+    <style name="res_2131558504_base_v7_widget_appcompat_toolbar" parent="@android:style/Widget">
+        <item name="android:paddingLeft">@dimen/abc_action_bar_default_padding_start_material</item>
+        <item name="android:paddingRight">@dimen/abc_action_bar_default_padding_end_material</item>
+        <item name="android:minHeight">?attr/actionBarSize</item>
+        <item name="buttonGravity">30</item>
+        <item name="collapseContentDescription">@string/abc_toolbar_collapse_description</item>
+        <item name="collapseIcon">?attr/homeAsUpIndicator</item>
+        <item name="contentInsetStart">16dp</item>
+        <item name="contentInsetStartWithNavigation">@dimen/abc_action_bar_content_inset_with_nav</item>
+        <item name="maxButtonHeight">@dimen/abc_action_bar_default_height_material</item>
+        <item name="subtitleTextAppearance">@style/res_2131558644_textappearance_widget_appcompat_toolbar_subtitle</item>
+        <item name="titleMargin">4dp</item>
+        <item name="titleTextAppearance">@style/res_2131558645_textappearance_widget_appcompat_toolbar_title</item>
+    </style>
+    <style name="res_2131558505_base_widget_appcompat_actionbar">
+        <item name="android:gravity">clip_horizontal</item>
+        <item name="actionButtonStyle">@style/res_2131558681_widget_appcompat_actionbutton</item>
+        <item name="actionOverflowButtonStyle">@style/res_2131558683_widget_appcompat_actionbutton_overflow</item>
+        <item name="background">@null</item>
+        <item name="backgroundSplit">@null</item>
+        <item name="backgroundStacked">@null</item>
+        <item name="contentInsetEnd">@dimen/abc_action_bar_content_inset_material</item>
+        <item name="contentInsetStart">@dimen/abc_action_bar_content_inset_material</item>
+        <item name="contentInsetStartWithNavigation">@dimen/abc_action_bar_content_inset_with_nav</item>
+        <item name="displayOptions">8</item>
+        <item name="divider">?attr/dividerVertical</item>
+        <item name="elevation">@dimen/abc_action_bar_elevation_material</item>
+        <item name="height">?attr/actionBarSize</item>
+        <item name="popupTheme">?attr/actionBarPopupTheme</item>
+        <item name="subtitleTextStyle">@style/res_2131558620_textappearance_appcompat_widget_actionbar_subtitle</item>
+        <item name="titleTextStyle">@style/res_2131558622_textappearance_appcompat_widget_actionbar_title</item>
+    </style>
+    <style name="res_2131558506_base_widget_appcompat_actionbar_solid" parent="@style/res_2131558505_base_widget_appcompat_actionbar">
+        <item name="background">?attr/colorPrimary</item>
+        <item name="backgroundSplit">?attr/colorPrimary</item>
+        <item name="backgroundStacked">?attr/colorPrimary</item>
+    </style>
+    <style name="res_2131558507_base_widget_appcompat_actionbar_tabbar">
+        <item name="divider">?attr/actionBarDivider</item>
+        <item name="dividerPadding">8dp</item>
+        <item name="showDividers">2</item>
+    </style>
+    <style name="res_2131558508_base_widget_appcompat_actionbar_tabtext" parent="@android:style/Widget.Material.ActionBar.TabText">
+    </style>
+    <style name="res_2131558509_base_widget_appcompat_actionbar_tabview" parent="@android:style/Widget.Material.ActionBar.TabView">
+    </style>
+    <style name="res_2131558510_base_widget_appcompat_actionbutton" parent="@android:style/Widget.Material.ActionButton">
+    </style>
+    <style name="res_2131558511_base_widget_appcompat_actionbutton_closemode" parent="@android:style/Widget.Material.ActionButton.CloseMode">
+        <item name="android:minWidth">56dp</item>
+    </style>
+    <style name="res_2131558512_base_widget_appcompat_actionbutton_overflow" parent="@android:style/Widget.Material.ActionButton.Overflow">
+        <item name="android:src">@null</item>
+        <item name="srcCompat">@drawable/abc_ic_menu_overflow_material</item>
+    </style>
+    <style name="res_2131558513_base_widget_appcompat_actionmode">
+        <item name="background">?attr/actionModeBackground</item>
+        <item name="backgroundSplit">?attr/actionModeSplitBackground</item>
+        <item name="closeItemLayout">@layout/abc_action_mode_close_item_material</item>
+        <item name="height">?attr/actionBarSize</item>
+        <item name="subtitleTextStyle">@style/res_2131558624_textappearance_appcompat_widget_actionmode_subtitle</item>
+        <item name="titleTextStyle">@style/res_2131558626_textappearance_appcompat_widget_actionmode_title</item>
+    </style>
+    <style name="res_2131558514_base_widget_appcompat_activitychooserview">
+        <item name="android:gravity">left|center_horizontal|clip_horizontal</item>
+        <item name="android:background">@drawable/abc_ab_share_pack_mtrl_alpha</item>
+        <item name="divider">?attr/dividerVertical</item>
+        <item name="dividerPadding">6dp</item>
+        <item name="showDividers">2</item>
+    </style>
+    <style name="res_2131558515_base_widget_appcompat_autocompletetextview" parent="@android:style/Widget.Material.AutoCompleteTextView">
+        <item name="android:background">?attr/editTextBackground</item>
+    </style>
+    <style name="res_2131558516_base_widget_appcompat_button" parent="@android:style/Widget.Material.Button">
+    </style>
+    <style name="res_2131558517_base_widget_appcompat_button_borderless" parent="@android:style/Widget.Material.Button.Borderless">
+    </style>
+    <style name="res_2131558518_base_widget_appcompat_button_borderless_colored" parent="@android:style/Widget.Material.Button.Borderless.Colored">
+        <item name="android:textColor">@color/abc_btn_colored_borderless_text_material</item>
+    </style>
+    <style name="res_2131558519_base_widget_appcompat_button_buttonbar_alertdialog" parent="@style/res_2131558689_widget_appcompat_button_borderless_colored">
+        <item name="android:minWidth">64dp</item>
+        <item name="android:minHeight">@dimen/abc_alert_dialog_button_bar_height</item>
+    </style>
+    <style name="res_2131558520_base_widget_appcompat_button_colored" parent="@style/res_2131558516_base_widget_appcompat_button">
+        <item name="android:textAppearance">@style/res_2131558630_textappearance_appcompat_widget_button_colored</item>
+        <item name="android:background">@drawable/abc_btn_colored_material</item>
+    </style>
+    <style name="res_2131558521_base_widget_appcompat_button_small" parent="@android:style/Widget.Material.Button.Small">
+    </style>
+    <style name="res_2131558522_base_widget_appcompat_buttonbar" parent="@android:style/Widget.Material.ButtonBar">
+    </style>
+    <style name="res_2131558523_base_widget_appcompat_buttonbar_alertdialog" parent="@style/res_2131558522_base_widget_appcompat_buttonbar">
+    </style>
+    <style name="res_2131558524_base_widget_appcompat_compoundbutton_checkbox" parent="@android:style/Widget.Material.CompoundButton.CheckBox">
+    </style>
+    <style name="res_2131558525_base_widget_appcompat_compoundbutton_radiobutton" parent="@android:style/Widget.Material.CompoundButton.RadioButton">
+    </style>
+    <style name="res_2131558526_base_widget_appcompat_compoundbutton_switch" parent="@android:style/Widget.CompoundButton">
+        <item name="android:background">?attr/controlBackground</item>
+        <item name="android:textOn">@string/abc_capital_on</item>
+        <item name="android:textOff">@string/abc_capital_off</item>
+        <item name="android:thumb">@drawable/abc_switch_thumb_material</item>
+        <item name="showText">false</item>
+        <item name="switchPadding">@dimen/abc_switch_padding</item>
+        <item name="switchTextAppearance">@style/res_2131558636_textappearance_appcompat_widget_switch</item>
+        <item name="track">@drawable/abc_switch_track_mtrl_alpha</item>
+    </style>
+    <style name="res_2131558527_base_widget_appcompat_drawerarrowtoggle" parent="@style/res_2131558528_base_widget_appcompat_drawerarrowtoggle_common">
+        <item name="barLength">18dp</item>
+        <item name="drawableSize">24dp</item>
+        <item name="gapBetweenBars">3dp</item>
+    </style>
+    <style name="res_2131558528_base_widget_appcompat_drawerarrowtoggle_common">
+        <item name="arrowHeadLength">8dp</item>
+        <item name="arrowShaftLength">16dp</item>
+        <item name="color">?android:attr/textColorSecondary</item>
+        <item name="spinBars">true</item>
+        <item name="thickness">2dp</item>
+    </style>
+    <style name="res_2131558529_base_widget_appcompat_dropdownitem_spinner" parent="@android:style/Widget.Material.DropDownItem.Spinner">
+    </style>
+    <style name="res_2131558530_base_widget_appcompat_edittext" parent="@android:style/Widget.Material.EditText">
+        <item name="android:background">?attr/editTextBackground</item>
+    </style>
+    <style name="res_2131558531_base_widget_appcompat_imagebutton" parent="@android:style/Widget.Material.ImageButton">
+    </style>
+    <style name="res_2131558532_base_widget_appcompat_light_actionbar" parent="@style/res_2131558505_base_widget_appcompat_actionbar">
+        <item name="actionButtonStyle">@style/res_2131558711_widget_appcompat_light_actionbutton</item>
+        <item name="actionOverflowButtonStyle">@style/res_2131558713_widget_appcompat_light_actionbutton_overflow</item>
+    </style>
+    <style name="res_2131558533_base_widget_appcompat_light_actionbar_solid" parent="@style/res_2131558532_base_widget_appcompat_light_actionbar">
+        <item name="background">?attr/colorPrimary</item>
+        <item name="backgroundSplit">?attr/colorPrimary</item>
+        <item name="backgroundStacked">?attr/colorPrimary</item>
+    </style>
+    <style name="res_2131558534_base_widget_appcompat_light_actionbar_tabbar" parent="@style/res_2131558507_base_widget_appcompat_actionbar_tabbar">
+    </style>
+    <style name="res_2131558535_base_widget_appcompat_light_actionbar_tabtext" parent="@android:style/Widget.Material.Light.ActionBar.TabText">
+    </style>
+    <style name="res_2131558536_base_widget_appcompat_light_actionbar_tabtext_inverse" parent="@android:style/Widget.Material.Light.ActionBar.TabText">
+    </style>
+    <style name="res_2131558537_base_widget_appcompat_light_actionbar_tabview" parent="@android:style/Widget.Material.Light.ActionBar.TabView">
+    </style>
+    <style name="res_2131558538_base_widget_appcompat_light_popupmenu" parent="@android:style/Widget.Material.Light.PopupMenu">
+    </style>
+    <style name="res_2131558539_base_widget_appcompat_light_popupmenu_overflow" parent="@style/res_2131558538_base_widget_appcompat_light_popupmenu">
+        <item name="android:dropDownHorizontalOffset">-4dp</item>
+        <item name="android:overlapAnchor">true</item>
+    </style>
+    <style name="res_2131558540_base_widget_appcompat_listmenuview" parent="@android:style/Widget">
+        <item name="subMenuArrow">@drawable/abc_ic_arrow_drop_right_black_24dp</item>
+    </style>
+    <style name="res_2131558541_base_widget_appcompat_listpopupwindow" parent="@android:style/Widget.Material.ListPopupWindow">
+    </style>
+    <style name="res_2131558542_base_widget_appcompat_listview" parent="@android:style/Widget.Material.ListView">
+    </style>
+    <style name="res_2131558543_base_widget_appcompat_listview_dropdown" parent="@android:style/Widget.Material.ListView.DropDown">
+    </style>
+    <style name="res_2131558544_base_widget_appcompat_listview_menu" parent="@style/res_2131558542_base_widget_appcompat_listview">
+    </style>
+    <style name="res_2131558545_base_widget_appcompat_popupmenu" parent="@android:style/Widget.Material.PopupMenu">
+    </style>
+    <style name="res_2131558546_base_widget_appcompat_popupmenu_overflow" parent="@style/res_2131558545_base_widget_appcompat_popupmenu">
+        <item name="android:dropDownHorizontalOffset">-4dp</item>
+        <item name="android:overlapAnchor">true</item>
+    </style>
+    <style name="res_2131558547_base_widget_appcompat_popupwindow" parent="@android:style/Widget.PopupWindow">
+    </style>
+    <style name="res_2131558548_base_widget_appcompat_progressbar" parent="@android:style/Widget.Material.ProgressBar">
+    </style>
+    <style name="res_2131558549_base_widget_appcompat_progressbar_horizontal" parent="@android:style/Widget.Material.ProgressBar.Horizontal">
+    </style>
+    <style name="res_2131558550_base_widget_appcompat_ratingbar" parent="@android:style/Widget.Material.RatingBar">
+    </style>
+    <style name="res_2131558551_base_widget_appcompat_ratingbar_indicator" parent="@android:style/Widget.RatingBar">
+        <item name="android:maxHeight">36dp</item>
+        <item name="android:indeterminateDrawable">@drawable/abc_ratingbar_indicator_material</item>
+        <item name="android:progressDrawable">@drawable/abc_ratingbar_indicator_material</item>
+        <item name="android:minHeight">36dp</item>
+        <item name="android:thumb">@null</item>
+        <item name="android:isIndicator">true</item>
+    </style>
+    <style name="res_2131558552_base_widget_appcompat_ratingbar_small" parent="@android:style/Widget.RatingBar">
+        <item name="android:maxHeight">16dp</item>
+        <item name="android:indeterminateDrawable">@drawable/abc_ratingbar_small_material</item>
+        <item name="android:progressDrawable">@drawable/abc_ratingbar_small_material</item>
+        <item name="android:minHeight">16dp</item>
+        <item name="android:thumb">@null</item>
+        <item name="android:isIndicator">true</item>
+    </style>
+    <style name="res_2131558553_base_widget_appcompat_searchview" parent="@android:style/Widget">
+        <item name="closeIcon">@drawable/abc_ic_clear_material</item>
+        <item name="commitIcon">@drawable/abc_ic_commit_search_api_mtrl_alpha</item>
+        <item name="goIcon">@drawable/abc_ic_go_search_api_material</item>
+        <item name="layout">@layout/abc_search_view</item>
+        <item name="queryBackground">@drawable/abc_textfield_search_material</item>
+        <item name="searchHintIcon">@drawable/abc_ic_search_api_material</item>
+        <item name="searchIcon">@drawable/abc_ic_search_api_material</item>
+        <item name="submitBackground">@drawable/abc_textfield_search_material</item>
+        <item name="suggestionRowLayout">@layout/abc_search_dropdown_item_icons_2line</item>
+        <item name="voiceIcon">@drawable/abc_ic_voice_search_api_material</item>
+    </style>
+    <style name="res_2131558554_base_widget_appcompat_searchview_actionbar" parent="@style/res_2131558553_base_widget_appcompat_searchview">
+        <item name="defaultQueryHint">@string/abc_search_hint</item>
+        <item name="queryBackground">@null</item>
+        <item name="searchHintIcon">@null</item>
+        <item name="submitBackground">@null</item>
+    </style>
+    <style name="res_2131558555_base_widget_appcompat_seekbar" parent="@android:style/Widget.Material.SeekBar">
+    </style>
+    <style name="res_2131558556_base_widget_appcompat_seekbar_discrete" parent="@style/res_2131558555_base_widget_appcompat_seekbar">
+        <item name="tickMark">@drawable/abc_seekbar_tick_mark_material</item>
+    </style>
+    <style name="res_2131558557_base_widget_appcompat_spinner" parent="@android:style/Widget.Material.Spinner">
+    </style>
+    <style name="res_2131558558_base_widget_appcompat_spinner_underlined" parent="@style/res_2131558557_base_widget_appcompat_spinner">
+        <item name="android:background">@drawable/abc_spinner_textfield_background_material</item>
+    </style>
+    <style name="res_2131558559_base_widget_appcompat_textview" parent="@android:style/Widget.Material.TextView">
+    </style>
+    <style name="res_2131558560_base_widget_appcompat_textview_spinneritem" parent="@android:style/Widget.Material.TextView.SpinnerItem">
+    </style>
+    <style name="res_2131558561_base_widget_appcompat_toolbar" parent="@style/res_2131558504_base_v7_widget_appcompat_toolbar">
+    </style>
+    <style name="res_2131558562_base_widget_appcompat_toolbar_button_navigation" parent="@android:style/Widget.Material.Toolbar.Button.Navigation">
+    </style>
+    <style name="res_2131558563_platform_appcompat" parent="@style/res_2131558568_platform_v21_appcompat">
+    </style>
+    <style name="res_2131558564_platform_appcompat_light" parent="@style/res_2131558569_platform_v21_appcompat_light">
+    </style>
+    <style name="res_2131558565_platform_themeoverlay_appcompat">
+        <item name="android:colorControlNormal">?attr/colorControlNormal</item>
+        <item name="android:colorControlActivated">?attr/colorControlActivated</item>
+        <item name="android:colorButtonNormal">?attr/colorButtonNormal</item>
+        <item name="android:colorControlHighlight">?attr/colorControlHighlight</item>
+        <item name="android:colorPrimary">?attr/colorPrimary</item>
+        <item name="android:colorPrimaryDark">?attr/colorPrimaryDark</item>
+        <item name="android:colorAccent">?attr/colorAccent</item>
+    </style>
+    <style name="res_2131558566_platform_themeoverlay_appcompat_dark" parent="@style/res_2131558565_platform_themeoverlay_appcompat">
+    </style>
+    <style name="res_2131558567_platform_themeoverlay_appcompat_light" parent="@style/res_2131558565_platform_themeoverlay_appcompat">
+    </style>
+    <style name="res_2131558568_platform_v21_appcompat" parent="@android:style/Theme.Material.NoActionBar">
+        <item name="android:textColorHintInverse">@color/abc_hint_foreground_material_light</item>
+        <item name="android:textColorHint">@color/abc_hint_foreground_material_dark</item>
+        <item name="android:textColorLink">?android:attr/colorAccent</item>
+        <item name="android:buttonBarStyle">?attr/buttonBarStyle</item>
+        <item name="android:buttonBarButtonStyle">?attr/buttonBarButtonStyle</item>
+        <item name="android:textColorLinkInverse">?android:attr/colorAccent</item>
+    </style>
+    <style name="res_2131558569_platform_v21_appcompat_light" parent="@android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:textColorHintInverse">@color/abc_hint_foreground_material_dark</item>
+        <item name="android:textColorHint">@color/abc_hint_foreground_material_light</item>
+        <item name="android:textColorLink">?android:attr/colorAccent</item>
+        <item name="android:buttonBarStyle">?attr/buttonBarStyle</item>
+        <item name="android:buttonBarButtonStyle">?attr/buttonBarButtonStyle</item>
+        <item name="android:textColorLinkInverse">?android:attr/colorAccent</item>
+    </style>
+    <style name="res_2131558572_platform_widget_appcompat_spinner" parent="@android:style/Widget.Holo.Spinner">
+    </style>
+    <style name="res_2131558573_rtloverlay_dialogwindowtitle_appcompat" parent="@style/res_2131558412_base_dialogwindowtitle_appcompat">
+        <item name="android:textAlignment">viewStart</item>
+    </style>
+    <style name="res_2131558574_rtloverlay_widget_appcompat_actionbar_titleitem" parent="@android:style/Widget">
+        <item name="android:layout_gravity">right|center_horizontal|clip_horizontal</item>
+        <item name="android:paddingEnd">8dp</item>
+    </style>
+    <style name="res_2131558575_rtloverlay_widget_appcompat_dialogtitle_icon" parent="@android:style/Widget">
+        <item name="android:layout_marginEnd">8dp</item>
+    </style>
+    <style name="res_2131558576_rtloverlay_widget_appcompat_popupmenuitem" parent="@android:style/Widget">
+        <item name="android:paddingEnd">16dp</item>
+    </style>
+    <style name="res_2131558577_rtloverlay_widget_appcompat_popupmenuitem_internalgroup" parent="@android:style/Widget">
+        <item name="android:layout_marginStart">16dp</item>
+    </style>
+    <style name="res_2131558578_rtloverlay_widget_appcompat_popupmenuitem_shortcut" parent="@android:style/Widget">
+        <item name="android:textAlignment">viewEnd</item>
+        <item name="android:layout_marginStart">16dp</item>
+    </style>
+    <style name="res_2131558579_rtloverlay_widget_appcompat_popupmenuitem_submenuarrow" parent="@android:style/Widget">
+        <item name="android:layout_marginStart">8dp</item>
+    </style>
+    <style name="res_2131558580_rtloverlay_widget_appcompat_popupmenuitem_text" parent="@android:style/Widget">
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:layout_alignParentStart">true</item>
+    </style>
+    <style name="res_2131558581_rtloverlay_widget_appcompat_popupmenuitem_title" parent="@android:style/Widget">
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:layout_marginStart">16dp</item>
+    </style>
+    <style name="res_2131558582_rtloverlay_widget_appcompat_search_dropdown" parent="@android:style/Widget">
+        <item name="android:paddingStart">@dimen/abc_dropdownitem_text_padding_left</item>
+        <item name="android:paddingEnd">4dp</item>
+    </style>
+    <style name="res_2131558583_rtloverlay_widget_appcompat_search_dropdown_icon1" parent="@android:style/Widget">
+        <item name="android:layout_alignParentStart">true</item>
+    </style>
+    <style name="res_2131558584_rtloverlay_widget_appcompat_search_dropdown_icon2" parent="@android:style/Widget">
+        <item name="android:layout_toStartOf">@id/edit_query</item>
+    </style>
+    <style name="res_2131558585_rtloverlay_widget_appcompat_search_dropdown_query" parent="@android:style/Widget">
+        <item name="android:layout_alignParentEnd">true</item>
+    </style>
+    <style name="res_2131558586_rtloverlay_widget_appcompat_search_dropdown_text" parent="@style/res_2131558529_base_widget_appcompat_dropdownitem_spinner">
+        <item name="android:layout_toStartOf">@android:id/icon2</item>
+        <item name="android:layout_toEndOf">@android:id/icon1</item>
+    </style>
+    <style name="res_2131558587_rtloverlay_widget_appcompat_searchview_magicon" parent="@android:style/Widget">
+        <item name="android:layout_marginStart">@dimen/abc_dropdownitem_text_padding_left</item>
+    </style>
+    <style name="res_2131558588_rtlunderlay_widget_appcompat_actionbutton" parent="@android:style/Widget">
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+    </style>
+    <style name="res_2131558589_rtlunderlay_widget_appcompat_actionbutton_overflow" parent="@style/res_2131558510_base_widget_appcompat_actionbutton">
+        <item name="android:paddingStart">@dimen/abc_action_bar_overflow_padding_start_material</item>
+        <item name="android:paddingEnd">@dimen/abc_action_bar_overflow_padding_end_material</item>
+    </style>
+    <style name="res_2131558590_textappearance_appcompat" parent="@style/res_2131558414_base_textappearance_appcompat">
+    </style>
+    <style name="res_2131558591_textappearance_appcompat_body1" parent="@style/res_2131558415_base_textappearance_appcompat_body1">
+    </style>
+    <style name="res_2131558592_textappearance_appcompat_body2" parent="@style/res_2131558416_base_textappearance_appcompat_body2">
+    </style>
+    <style name="res_2131558593_textappearance_appcompat_button" parent="@style/res_2131558417_base_textappearance_appcompat_button">
+    </style>
+    <style name="res_2131558594_textappearance_appcompat_caption" parent="@style/res_2131558418_base_textappearance_appcompat_caption">
+    </style>
+    <style name="res_2131558595_textappearance_appcompat_display1" parent="@style/res_2131558419_base_textappearance_appcompat_display1">
+    </style>
+    <style name="res_2131558596_textappearance_appcompat_display2" parent="@style/res_2131558420_base_textappearance_appcompat_display2">
+    </style>
+    <style name="res_2131558597_textappearance_appcompat_display3" parent="@style/res_2131558421_base_textappearance_appcompat_display3">
+    </style>
+    <style name="res_2131558598_textappearance_appcompat_display4" parent="@style/res_2131558422_base_textappearance_appcompat_display4">
+    </style>
+    <style name="res_2131558599_textappearance_appcompat_headline" parent="@style/res_2131558423_base_textappearance_appcompat_headline">
+    </style>
+    <style name="res_2131558600_textappearance_appcompat_inverse" parent="@style/res_2131558424_base_textappearance_appcompat_inverse">
+    </style>
+    <style name="res_2131558601_textappearance_appcompat_large" parent="@style/res_2131558425_base_textappearance_appcompat_large">
+    </style>
+    <style name="res_2131558602_textappearance_appcompat_large_inverse" parent="@style/res_2131558426_base_textappearance_appcompat_large_inverse">
+    </style>
+    <style name="res_2131558603_textappearance_appcompat_light_searchresult_subtitle" parent="@style/res_2131558610_textappearance_appcompat_searchresult_subtitle">
+    </style>
+    <style name="res_2131558604_textappearance_appcompat_light_searchresult_title" parent="@style/res_2131558611_textappearance_appcompat_searchresult_title">
+    </style>
+    <style name="res_2131558605_textappearance_appcompat_light_widget_popupmenu_large" parent="@style/res_2131558634_textappearance_appcompat_widget_popupmenu_large">
+    </style>
+    <style name="res_2131558606_textappearance_appcompat_light_widget_popupmenu_small" parent="@style/res_2131558635_textappearance_appcompat_widget_popupmenu_small">
+    </style>
+    <style name="res_2131558607_textappearance_appcompat_medium" parent="@style/res_2131558429_base_textappearance_appcompat_medium">
+    </style>
+    <style name="res_2131558608_textappearance_appcompat_medium_inverse" parent="@style/res_2131558430_base_textappearance_appcompat_medium_inverse">
+    </style>
+    <style name="res_2131558609_textappearance_appcompat_menu" parent="@style/res_2131558431_base_textappearance_appcompat_menu">
+    </style>
+    <style name="res_2131558610_textappearance_appcompat_searchresult_subtitle" parent="@style/res_2131558433_base_textappearance_appcompat_searchresult_subtitle">
+    </style>
+    <style name="res_2131558611_textappearance_appcompat_searchresult_title" parent="@style/res_2131558434_base_textappearance_appcompat_searchresult_title">
+    </style>
+    <style name="res_2131558612_textappearance_appcompat_small" parent="@style/res_2131558435_base_textappearance_appcompat_small">
+    </style>
+    <style name="res_2131558613_textappearance_appcompat_small_inverse" parent="@style/res_2131558436_base_textappearance_appcompat_small_inverse">
+    </style>
+    <style name="res_2131558614_textappearance_appcompat_subhead" parent="@style/res_2131558437_base_textappearance_appcompat_subhead">
+    </style>
+    <style name="res_2131558615_textappearance_appcompat_subhead_inverse" parent="@style/res_2131558438_base_textappearance_appcompat_subhead_inverse">
+    </style>
+    <style name="res_2131558616_textappearance_appcompat_title" parent="@style/res_2131558439_base_textappearance_appcompat_title">
+    </style>
+    <style name="res_2131558617_textappearance_appcompat_title_inverse" parent="@style/res_2131558440_base_textappearance_appcompat_title_inverse">
+    </style>
+    <style name="res_2131558618_textappearance_appcompat_tooltip" parent="@style/res_2131558590_textappearance_appcompat">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    <style name="res_2131558619_textappearance_appcompat_widget_actionbar_menu" parent="@style/res_2131558442_base_textappearance_appcompat_widget_actionbar_menu">
+    </style>
+    <style name="res_2131558620_textappearance_appcompat_widget_actionbar_subtitle" parent="@style/res_2131558443_base_textappearance_appcompat_widget_actionbar_subtitle">
+    </style>
+    <style name="res_2131558621_textappearance_appcompat_widget_actionbar_subtitle_inverse" parent="@style/res_2131558444_base_textappearance_appcompat_widget_actionbar_subtitle_inverse">
+    </style>
+    <style name="res_2131558622_textappearance_appcompat_widget_actionbar_title" parent="@style/res_2131558445_base_textappearance_appcompat_widget_actionbar_title">
+    </style>
+    <style name="res_2131558623_textappearance_appcompat_widget_actionbar_title_inverse" parent="@style/res_2131558446_base_textappearance_appcompat_widget_actionbar_title_inverse">
+    </style>
+    <style name="res_2131558624_textappearance_appcompat_widget_actionmode_subtitle" parent="@style/res_2131558447_base_textappearance_appcompat_widget_actionmode_subtitle">
+    </style>
+    <style name="res_2131558625_textappearance_appcompat_widget_actionmode_subtitle_inverse" parent="@style/res_2131558624_textappearance_appcompat_widget_actionmode_subtitle">
+    </style>
+    <style name="res_2131558626_textappearance_appcompat_widget_actionmode_title" parent="@style/res_2131558448_base_textappearance_appcompat_widget_actionmode_title">
+    </style>
+    <style name="res_2131558627_textappearance_appcompat_widget_actionmode_title_inverse" parent="@style/res_2131558626_textappearance_appcompat_widget_actionmode_title">
+    </style>
+    <style name="res_2131558628_textappearance_appcompat_widget_button" parent="@style/res_2131558449_base_textappearance_appcompat_widget_button">
+    </style>
+    <style name="res_2131558629_textappearance_appcompat_widget_button_borderless_colored" parent="@style/res_2131558450_base_textappearance_appcompat_widget_button_borderless_colored">
+    </style>
+    <style name="res_2131558630_textappearance_appcompat_widget_button_colored" parent="@style/res_2131558451_base_textappearance_appcompat_widget_button_colored">
+    </style>
+    <style name="res_2131558631_textappearance_appcompat_widget_button_inverse" parent="@style/res_2131558452_base_textappearance_appcompat_widget_button_inverse">
+    </style>
+    <style name="res_2131558632_textappearance_appcompat_widget_dropdownitem" parent="@style/res_2131558453_base_textappearance_appcompat_widget_dropdownitem">
+    </style>
+    <style name="res_2131558633_textappearance_appcompat_widget_popupmenu_header" parent="@style/res_2131558454_base_textappearance_appcompat_widget_popupmenu_header">
+    </style>
+    <style name="res_2131558634_textappearance_appcompat_widget_popupmenu_large" parent="@style/res_2131558455_base_textappearance_appcompat_widget_popupmenu_large">
+    </style>
+    <style name="res_2131558635_textappearance_appcompat_widget_popupmenu_small" parent="@style/res_2131558456_base_textappearance_appcompat_widget_popupmenu_small">
+    </style>
+    <style name="res_2131558636_textappearance_appcompat_widget_switch" parent="@style/res_2131558457_base_textappearance_appcompat_widget_switch">
+    </style>
+    <style name="res_2131558637_textappearance_appcompat_widget_textview_spinneritem" parent="@style/res_2131558458_base_textappearance_appcompat_widget_textview_spinneritem">
+    </style>
+    <style name="res_2131558638_textappearance_compat_notification" parent="@android:style/TextAppearance.Material.Notification">
+    </style>
+    <style name="res_2131558639_textappearance_compat_notification_info" parent="@android:style/TextAppearance.Material.Notification.Info">
+    </style>
+    <style name="res_2131558640_textappearance_compat_notification_line2" parent="@style/res_2131558639_textappearance_compat_notification_info">
+    </style>
+    <style name="res_2131558641_textappearance_compat_notification_time" parent="@android:style/TextAppearance.Material.Notification.Time">
+    </style>
+    <style name="res_2131558642_textappearance_compat_notification_title" parent="@android:style/TextAppearance.Material.Notification.Title">
+    </style>
+    <style name="res_2131558643_textappearance_widget_appcompat_expandedmenu_item" parent="@style/res_2131558459_base_textappearance_widget_appcompat_expandedmenu_item">
+    </style>
+    <style name="res_2131558644_textappearance_widget_appcompat_toolbar_subtitle" parent="@style/res_2131558460_base_textappearance_widget_appcompat_toolbar_subtitle">
+    </style>
+    <style name="res_2131558645_textappearance_widget_appcompat_toolbar_title" parent="@style/res_2131558461_base_textappearance_widget_appcompat_toolbar_title">
+    </style>
+    <style name="res_2131558646_theme_appcompat" parent="@style/res_2131558462_base_theme_appcompat">
+    </style>
+    <style name="res_2131558647_theme_appcompat_compactmenu" parent="@style/res_2131558463_base_theme_appcompat_compactmenu">
+    </style>
+    <style name="res_2131558648_theme_appcompat_daynight" parent="@style/res_2131558659_theme_appcompat_light">
+    </style>
+    <style name="res_2131558649_theme_appcompat_daynight_darkactionbar" parent="@style/res_2131558660_theme_appcompat_light_darkactionbar">
+    </style>
+    <style name="res_2131558650_theme_appcompat_daynight_dialog" parent="@style/res_2131558661_theme_appcompat_light_dialog">
+    </style>
+    <style name="res_2131558651_theme_appcompat_daynight_dialog_alert" parent="@style/res_2131558662_theme_appcompat_light_dialog_alert">
+    </style>
+    <style name="res_2131558652_theme_appcompat_daynight_dialog_minwidth" parent="@style/res_2131558663_theme_appcompat_light_dialog_minwidth">
+    </style>
+    <style name="res_2131558653_theme_appcompat_daynight_dialogwhenlarge" parent="@style/res_2131558664_theme_appcompat_light_dialogwhenlarge">
+    </style>
+    <style name="res_2131558654_theme_appcompat_daynight_noactionbar" parent="@style/res_2131558665_theme_appcompat_light_noactionbar">
+    </style>
+    <style name="res_2131558655_theme_appcompat_dialog" parent="@style/res_2131558464_base_theme_appcompat_dialog">
+    </style>
+    <style name="res_2131558656_theme_appcompat_dialog_alert" parent="@style/res_2131558465_base_theme_appcompat_dialog_alert">
+    </style>
+    <style name="res_2131558657_theme_appcompat_dialog_minwidth" parent="@style/res_2131558467_base_theme_appcompat_dialog_minwidth">
+    </style>
+    <style name="res_2131558658_theme_appcompat_dialogwhenlarge" parent="@style/res_2131558468_base_theme_appcompat_dialogwhenlarge">
+    </style>
+    <style name="res_2131558659_theme_appcompat_light" parent="@style/res_2131558469_base_theme_appcompat_light">
+    </style>
+    <style name="res_2131558660_theme_appcompat_light_darkactionbar" parent="@style/res_2131558470_base_theme_appcompat_light_darkactionbar">
+    </style>
+    <style name="res_2131558661_theme_appcompat_light_dialog" parent="@style/res_2131558471_base_theme_appcompat_light_dialog">
+    </style>
+    <style name="res_2131558662_theme_appcompat_light_dialog_alert" parent="@style/res_2131558472_base_theme_appcompat_light_dialog_alert">
+    </style>
+    <style name="res_2131558663_theme_appcompat_light_dialog_minwidth" parent="@style/res_2131558474_base_theme_appcompat_light_dialog_minwidth">
+    </style>
+    <style name="res_2131558664_theme_appcompat_light_dialogwhenlarge" parent="@style/res_2131558475_base_theme_appcompat_light_dialogwhenlarge">
+    </style>
+    <style name="res_2131558665_theme_appcompat_light_noactionbar" parent="@style/res_2131558659_theme_appcompat_light">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="res_2131558666_theme_appcompat_noactionbar" parent="@style/res_2131558646_theme_appcompat">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="res_2131558667_themeoverlay_appcompat" parent="@style/res_2131558476_base_themeoverlay_appcompat">
+    </style>
+    <style name="res_2131558668_themeoverlay_appcompat_actionbar" parent="@style/res_2131558477_base_themeoverlay_appcompat_actionbar">
+    </style>
+    <style name="res_2131558669_themeoverlay_appcompat_dark" parent="@style/res_2131558478_base_themeoverlay_appcompat_dark">
+    </style>
+    <style name="res_2131558670_themeoverlay_appcompat_dark_actionbar" parent="@style/res_2131558479_base_themeoverlay_appcompat_dark_actionbar">
+    </style>
+    <style name="res_2131558671_themeoverlay_appcompat_daynight" parent="@style/res_2131558675_themeoverlay_appcompat_light">
+    </style>
+    <style name="res_2131558672_themeoverlay_appcompat_daynight_actionbar" parent="@style/res_2131558671_themeoverlay_appcompat_daynight">
+        <item name="colorControlNormal">?android:attr/textColorPrimary</item>
+        <item name="searchViewStyle">@style/res_2131558738_widget_appcompat_searchview_actionbar</item>
+    </style>
+    <style name="res_2131558673_themeoverlay_appcompat_dialog" parent="@style/res_2131558480_base_themeoverlay_appcompat_dialog">
+    </style>
+    <style name="res_2131558674_themeoverlay_appcompat_dialog_alert" parent="@style/res_2131558481_base_themeoverlay_appcompat_dialog_alert">
+    </style>
+    <style name="res_2131558675_themeoverlay_appcompat_light" parent="@style/res_2131558482_base_themeoverlay_appcompat_light">
+    </style>
+    <style name="res_2131558676_widget_appcompat_actionbar" parent="@style/res_2131558505_base_widget_appcompat_actionbar">
+    </style>
+    <style name="res_2131558677_widget_appcompat_actionbar_solid" parent="@style/res_2131558506_base_widget_appcompat_actionbar_solid">
+    </style>
+    <style name="res_2131558678_widget_appcompat_actionbar_tabbar" parent="@style/res_2131558507_base_widget_appcompat_actionbar_tabbar">
+    </style>
+    <style name="res_2131558679_widget_appcompat_actionbar_tabtext" parent="@style/res_2131558508_base_widget_appcompat_actionbar_tabtext">
+    </style>
+    <style name="res_2131558680_widget_appcompat_actionbar_tabview" parent="@style/res_2131558509_base_widget_appcompat_actionbar_tabview">
+    </style>
+    <style name="res_2131558681_widget_appcompat_actionbutton" parent="@style/res_2131558510_base_widget_appcompat_actionbutton">
+    </style>
+    <style name="res_2131558682_widget_appcompat_actionbutton_closemode" parent="@style/res_2131558511_base_widget_appcompat_actionbutton_closemode">
+    </style>
+    <style name="res_2131558683_widget_appcompat_actionbutton_overflow" parent="@style/res_2131558512_base_widget_appcompat_actionbutton_overflow">
+    </style>
+    <style name="res_2131558684_widget_appcompat_actionmode" parent="@style/res_2131558513_base_widget_appcompat_actionmode">
+    </style>
+    <style name="res_2131558685_widget_appcompat_activitychooserview" parent="@style/res_2131558514_base_widget_appcompat_activitychooserview">
+    </style>
+    <style name="res_2131558686_widget_appcompat_autocompletetextview" parent="@style/res_2131558515_base_widget_appcompat_autocompletetextview">
+    </style>
+    <style name="res_2131558687_widget_appcompat_button" parent="@style/res_2131558516_base_widget_appcompat_button">
+    </style>
+    <style name="res_2131558688_widget_appcompat_button_borderless" parent="@style/res_2131558517_base_widget_appcompat_button_borderless">
+    </style>
+    <style name="res_2131558689_widget_appcompat_button_borderless_colored" parent="@style/res_2131558518_base_widget_appcompat_button_borderless_colored">
+    </style>
+    <style name="res_2131558690_widget_appcompat_button_buttonbar_alertdialog" parent="@style/res_2131558519_base_widget_appcompat_button_buttonbar_alertdialog">
+    </style>
+    <style name="res_2131558691_widget_appcompat_button_colored" parent="@style/res_2131558520_base_widget_appcompat_button_colored">
+    </style>
+    <style name="res_2131558692_widget_appcompat_button_small" parent="@style/res_2131558521_base_widget_appcompat_button_small">
+    </style>
+    <style name="res_2131558693_widget_appcompat_buttonbar" parent="@style/res_2131558522_base_widget_appcompat_buttonbar">
+    </style>
+    <style name="res_2131558694_widget_appcompat_buttonbar_alertdialog" parent="@style/res_2131558523_base_widget_appcompat_buttonbar_alertdialog">
+    </style>
+    <style name="res_2131558695_widget_appcompat_compoundbutton_checkbox" parent="@style/res_2131558524_base_widget_appcompat_compoundbutton_checkbox">
+    </style>
+    <style name="res_2131558696_widget_appcompat_compoundbutton_radiobutton" parent="@style/res_2131558525_base_widget_appcompat_compoundbutton_radiobutton">
+    </style>
+    <style name="res_2131558697_widget_appcompat_compoundbutton_switch" parent="@style/res_2131558526_base_widget_appcompat_compoundbutton_switch">
+    </style>
+    <style name="res_2131558698_widget_appcompat_drawerarrowtoggle" parent="@style/res_2131558527_base_widget_appcompat_drawerarrowtoggle">
+        <item name="color">?attr/colorControlNormal</item>
+    </style>
+    <style name="res_2131558699_widget_appcompat_dropdownitem_spinner" parent="@style/res_2131558586_rtloverlay_widget_appcompat_search_dropdown_text">
+    </style>
+    <style name="res_2131558700_widget_appcompat_edittext" parent="@style/res_2131558530_base_widget_appcompat_edittext">
+    </style>
+    <style name="res_2131558701_widget_appcompat_imagebutton" parent="@style/res_2131558531_base_widget_appcompat_imagebutton">
+    </style>
+    <style name="res_2131558702_widget_appcompat_light_actionbar" parent="@style/res_2131558532_base_widget_appcompat_light_actionbar">
+    </style>
+    <style name="res_2131558703_widget_appcompat_light_actionbar_solid" parent="@style/res_2131558533_base_widget_appcompat_light_actionbar_solid">
+    </style>
+    <style name="res_2131558704_widget_appcompat_light_actionbar_solid_inverse" parent="@style/res_2131558703_widget_appcompat_light_actionbar_solid">
+    </style>
+    <style name="res_2131558705_widget_appcompat_light_actionbar_tabbar" parent="@style/res_2131558534_base_widget_appcompat_light_actionbar_tabbar">
+    </style>
+    <style name="res_2131558706_widget_appcompat_light_actionbar_tabbar_inverse" parent="@style/res_2131558705_widget_appcompat_light_actionbar_tabbar">
+    </style>
+    <style name="res_2131558707_widget_appcompat_light_actionbar_tabtext" parent="@style/res_2131558535_base_widget_appcompat_light_actionbar_tabtext">
+    </style>
+    <style name="res_2131558708_widget_appcompat_light_actionbar_tabtext_inverse" parent="@style/res_2131558536_base_widget_appcompat_light_actionbar_tabtext_inverse">
+    </style>
+    <style name="res_2131558709_widget_appcompat_light_actionbar_tabview" parent="@style/res_2131558537_base_widget_appcompat_light_actionbar_tabview">
+    </style>
+    <style name="res_2131558710_widget_appcompat_light_actionbar_tabview_inverse" parent="@style/res_2131558709_widget_appcompat_light_actionbar_tabview">
+    </style>
+    <style name="res_2131558711_widget_appcompat_light_actionbutton" parent="@style/res_2131558681_widget_appcompat_actionbutton">
+    </style>
+    <style name="res_2131558712_widget_appcompat_light_actionbutton_closemode" parent="@style/res_2131558682_widget_appcompat_actionbutton_closemode">
+    </style>
+    <style name="res_2131558713_widget_appcompat_light_actionbutton_overflow" parent="@style/res_2131558683_widget_appcompat_actionbutton_overflow">
+    </style>
+    <style name="res_2131558714_widget_appcompat_light_actionmode_inverse" parent="@style/res_2131558684_widget_appcompat_actionmode">
+    </style>
+    <style name="res_2131558715_widget_appcompat_light_activitychooserview" parent="@style/res_2131558685_widget_appcompat_activitychooserview">
+    </style>
+    <style name="res_2131558716_widget_appcompat_light_autocompletetextview" parent="@style/res_2131558686_widget_appcompat_autocompletetextview">
+    </style>
+    <style name="res_2131558717_widget_appcompat_light_dropdownitem_spinner" parent="@style/res_2131558699_widget_appcompat_dropdownitem_spinner">
+    </style>
+    <style name="res_2131558718_widget_appcompat_light_listpopupwindow" parent="@style/res_2131558725_widget_appcompat_listpopupwindow">
+    </style>
+    <style name="res_2131558719_widget_appcompat_light_listview_dropdown" parent="@style/res_2131558727_widget_appcompat_listview_dropdown">
+    </style>
+    <style name="res_2131558720_widget_appcompat_light_popupmenu" parent="@style/res_2131558538_base_widget_appcompat_light_popupmenu">
+    </style>
+    <style name="res_2131558721_widget_appcompat_light_popupmenu_overflow" parent="@style/res_2131558539_base_widget_appcompat_light_popupmenu_overflow">
+    </style>
+    <style name="res_2131558722_widget_appcompat_light_searchview" parent="@style/res_2131558737_widget_appcompat_searchview">
+    </style>
+    <style name="res_2131558723_widget_appcompat_light_spinner_dropdown_actionbar" parent="@style/res_2131558743_widget_appcompat_spinner_dropdown_actionbar">
+    </style>
+    <style name="res_2131558724_widget_appcompat_listmenuview" parent="@style/res_2131558540_base_widget_appcompat_listmenuview">
+    </style>
+    <style name="res_2131558725_widget_appcompat_listpopupwindow" parent="@style/res_2131558541_base_widget_appcompat_listpopupwindow">
+    </style>
+    <style name="res_2131558726_widget_appcompat_listview" parent="@style/res_2131558542_base_widget_appcompat_listview">
+    </style>
+    <style name="res_2131558727_widget_appcompat_listview_dropdown" parent="@style/res_2131558543_base_widget_appcompat_listview_dropdown">
+    </style>
+    <style name="res_2131558728_widget_appcompat_listview_menu" parent="@style/res_2131558544_base_widget_appcompat_listview_menu">
+    </style>
+    <style name="res_2131558729_widget_appcompat_popupmenu" parent="@style/res_2131558545_base_widget_appcompat_popupmenu">
+    </style>
+    <style name="res_2131558730_widget_appcompat_popupmenu_overflow" parent="@style/res_2131558546_base_widget_appcompat_popupmenu_overflow">
+    </style>
+    <style name="res_2131558731_widget_appcompat_popupwindow" parent="@style/res_2131558547_base_widget_appcompat_popupwindow">
+    </style>
+    <style name="res_2131558732_widget_appcompat_progressbar" parent="@style/res_2131558548_base_widget_appcompat_progressbar">
+    </style>
+    <style name="res_2131558733_widget_appcompat_progressbar_horizontal" parent="@style/res_2131558549_base_widget_appcompat_progressbar_horizontal">
+    </style>
+    <style name="res_2131558734_widget_appcompat_ratingbar" parent="@style/res_2131558550_base_widget_appcompat_ratingbar">
+    </style>
+    <style name="res_2131558735_widget_appcompat_ratingbar_indicator" parent="@style/res_2131558551_base_widget_appcompat_ratingbar_indicator">
+    </style>
+    <style name="res_2131558736_widget_appcompat_ratingbar_small" parent="@style/res_2131558552_base_widget_appcompat_ratingbar_small">
+    </style>
+    <style name="res_2131558737_widget_appcompat_searchview" parent="@style/res_2131558553_base_widget_appcompat_searchview">
+    </style>
+    <style name="res_2131558738_widget_appcompat_searchview_actionbar" parent="@style/res_2131558554_base_widget_appcompat_searchview_actionbar">
+    </style>
+    <style name="res_2131558739_widget_appcompat_seekbar" parent="@style/res_2131558555_base_widget_appcompat_seekbar">
+    </style>
+    <style name="res_2131558740_widget_appcompat_seekbar_discrete" parent="@style/res_2131558556_base_widget_appcompat_seekbar_discrete">
+    </style>
+    <style name="res_2131558741_widget_appcompat_spinner" parent="@style/res_2131558557_base_widget_appcompat_spinner">
+    </style>
+    <style name="res_2131558742_widget_appcompat_spinner_dropdown" parent="@style/res_2131558741_widget_appcompat_spinner">
+    </style>
+    <style name="res_2131558743_widget_appcompat_spinner_dropdown_actionbar" parent="@style/res_2131558742_widget_appcompat_spinner_dropdown">
+    </style>
+    <style name="res_2131558744_widget_appcompat_spinner_underlined" parent="@style/res_2131558558_base_widget_appcompat_spinner_underlined">
+    </style>
+    <style name="res_2131558745_widget_appcompat_textview" parent="@style/res_2131558559_base_widget_appcompat_textview">
+    </style>
+    <style name="res_2131558746_widget_appcompat_textview_spinneritem" parent="@style/res_2131558560_base_widget_appcompat_textview_spinneritem">
+    </style>
+    <style name="res_2131558747_widget_appcompat_toolbar" parent="@style/res_2131558561_base_widget_appcompat_toolbar">
+    </style>
+    <style name="res_2131558748_widget_appcompat_toolbar_button_navigation" parent="@style/res_2131558562_base_widget_appcompat_toolbar_button_navigation">
+    </style>
+    <style name="res_2131558749_widget_compat_notificationactioncontainer">
+        <item name="android:background">@drawable/notification_action_background</item>
+    </style>
+    <style name="res_2131558750_widget_compat_notificationactiontext">
+        <item name="android:textAppearance">?android:attr/textAppearanceButton</item>
+        <item name="android:textSize">@dimen/notification_action_text_size</item>
+        <item name="android:textColor">@color/secondary_text_default_material_light</item>
+    </style>
+</resources>

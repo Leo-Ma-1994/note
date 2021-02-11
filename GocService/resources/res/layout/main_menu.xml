@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_vertical" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+        <TextView android:textSize="40dp" android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:text="nFore Android BT Demo UI"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+        <TextView android:textSize="15dp" android:gravity="center" android:id="@+id/text_nf_version" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:layout_weight="1"/>
+        <TextView android:textSize="15dp" android:gravity="center" android:id="@+id/text_service_version" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:layout_weight="1"/>
+        <TextView android:textSize="15dp" android:gravity="center" android:id="@+id/text_ui_version" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+        <Button android:gravity="center" android:id="@+id/button_opp" android:visibility="visible" android:layout_width="match_parent" android:layout_height="100dp" android:text="OPP" android:layout_weight="1"/>
+        <Button android:gravity="center" android:id="@+id/button_hfp" android:visibility="visible" android:layout_width="match_parent" android:layout_height="100dp" android:text="HFP" android:layout_weight="1"/>
+        <Button android:gravity="center" android:id="@+id/button_a2dp" android:visibility="visible" android:layout_width="match_parent" android:layout_height="100dp" android:text="A2DP" android:layout_weight="1"/>
+        <Button android:gravity="center" android:id="@+id/button_pbap" android:visibility="visible" android:layout_width="match_parent" android:layout_height="100dp" android:text="PBAP" android:layout_weight="1"/>
+        <Button android:gravity="center" android:id="@+id/button_spp" android:layout_width="match_parent" android:layout_height="100dp" android:text="SPP" android:layout_weight="1"/>
+        <Button android:gravity="center" android:id="@+id/button_map" android:layout_width="match_parent" android:layout_height="100dp" android:text="MAP" android:layout_weight="1"/>
+        <Button android:gravity="center" android:id="@+id/button_hid" android:visibility="visible" android:layout_width="match_parent" android:layout_height="100dp" android:text="HID" android:layout_weight="1"/>
+        <Button android:gravity="center" android:id="@+id/button_gatt" android:visibility="visible" android:layout_width="match_parent" android:layout_height="100dp" android:text="Gatt" android:layout_weight="1"/>
+        <Button android:gravity="center" android:id="@+id/button_setting" android:layout_width="match_parent" android:layout_height="100dp" android:text="Setting" android:layout_weight="1"/>
+        <Button android:gravity="center" android:id="@+id/button_back" android:layout_width="match_parent" android:layout_height="100dp" android:text="Back" android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>

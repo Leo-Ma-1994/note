@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="res_2131558464_base_theme_appcompat_dialog" parent="@style/res_2131558484_base_v21_theme_appcompat_dialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowElevation">0dp</item>
+    </style>
+    <style name="res_2131558471_base_theme_appcompat_light_dialog" parent="@style/res_2131558486_base_v21_theme_appcompat_light_dialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowElevation">0dp</item>
+    </style>
+    <style name="res_2131558480_base_themeoverlay_appcompat_dialog" parent="@style/res_2131558487_base_v21_themeoverlay_appcompat_dialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowElevation">0dp</item>
+    </style>
+</resources>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_vertical" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="30dp">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="30dp">
+            <TextView android:gravity="center" android:layout_width="match_parent" android:layout_height="30dp" android:text="A2DP State : " android:layout_weight="1"/>
+            <TextView android:gravity="center" android:id="@+id/text_state_ad2p" android:layout_width="match_parent" android:layout_height="30dp" android:layout_weight="1"/>
+            <TextView android:gravity="center" android:layout_width="match_parent" android:layout_height="30dp" android:text="AVRCP State : " android:layout_weight="1"/>
+            <TextView android:gravity="center" android:id="@+id/text_state_avrcp" android:layout_width="match_parent" android:layout_height="30dp" android:text="" android:layout_weight="1"/>
+            <TextView android:gravity="center" android:layout_width="match_parent" android:layout_height="30dp" android:text="Local Vol: " android:layout_weight="1"/>
+            <TextView android:gravity="center" android:id="@+id/text_local_volume" android:layout_width="match_parent" android:layout_height="30dp" android:text="1.0" android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="6">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <TextView android:textSize="20dp" android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Artist  : " android:layout_weight="2"/>
+            <TextView android:textSize="20dp" android:ellipsize="marquee" android:gravity="center" android:id="@+id/text_artist" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="match_parent" android:layout_height="match_parent" android:text="" android:singleLine="true" android:layout_weight="1" android:marqueeRepeatLimit="marquee_forever"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <TextView android:textSize="20dp" android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Album  : " android:layout_weight="2"/>
+            <TextView android:textSize="20dp" android:ellipsize="marquee" android:gravity="center" android:id="@+id/text_album" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="match_parent" android:layout_height="match_parent" android:text="" android:singleLine="true" android:layout_weight="1" android:marqueeRepeatLimit="marquee_forever"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <TextView android:textSize="20dp" android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Title  : " android:layout_weight="2"/>
+            <TextView android:textSize="20dp" android:ellipsize="marquee" android:gravity="center" android:id="@+id/text_title" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="match_parent" android:layout_height="match_parent" android:text="" android:singleLine="true" android:layout_weight="1" android:marqueeRepeatLimit="marquee_forever"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+        <TextView android:id="@+id/text_no_support_playback_pos_changed" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <TextView android:id="@+id/text_song_position_time" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <ProgressBar android:gravity="center_vertical" android:id="@+id/progressBar_a2dp" android:visibility="invisible" android:layout_width="400dp" android:layout_height="wrap_content" style="?android:attr/progressBarStyleHorizontal"/>
+        <TextView android:id="@+id/text_song_length_time" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="0.18">
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1.5">
+            <Button android:textSize="20dp" android:gravity="center" android:id="@+id/button_backward" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="i&lt;"/>
+            <Button android:textSize="20dp" android:gravity="center" android:id="@+id/button_rewind" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="&lt;&lt;"/>
+            <Button android:textSize="20dp" android:gravity="center" android:id="@+id/button_play" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="&gt;"/>
+            <Button android:textSize="20dp" android:gravity="center" android:id="@+id/button_pause" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="II"/>
+            <Button android:textSize="20dp" android:gravity="center" android:id="@+id/button_stop" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="[]"/>
+            <Button android:textSize="20dp" android:gravity="center" android:id="@+id/button_fastforward" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="&gt;&gt;"/>
+            <Button android:textSize="20dp" android:gravity="center" android:id="@+id/button_forward" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="&gt;i"/>
+            <Button android:textSize="20dp" android:gravity="center" android:id="@+id/button_browsing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="..."/>
+            <Button android:textSize="20dp" android:gravity="center" android:id="@+id/button_back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Back"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <Spinner android:gravity="center" android:id="@+id/spinner_equalizer" android:layout_width="match_parent" android:layout_height="50dp" android:layout_weight="1"/>
+            <Spinner android:gravity="center" android:id="@+id/spinner_repeat_mode" android:layout_width="match_parent" android:layout_height="50dp" android:layout_weight="1"/>
+            <Spinner android:gravity="center" android:id="@+id/spinner_shuffle" android:layout_width="match_parent" android:layout_height="50dp" android:layout_weight="1"/>
+            <Spinner android:gravity="center" android:id="@+id/spinner_scan" android:layout_width="match_parent" android:layout_height="50dp" android:layout_weight="1"/>
+            <Button android:textSize="30dp" android:gravity="center" android:id="@+id/button_volume_up" android:layout_width="match_parent" android:layout_height="50dp" android:text="Vol +" android:layout_weight="1"/>
+            <Button android:textSize="30dp" android:gravity="center" android:id="@+id/button_volume_down" android:layout_width="match_parent" android:layout_height="50dp" android:text="Vol -" android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+        <Button android:textSize="25dp" android:gravity="center" android:id="@+id/button_a2dp_connect" android:layout_width="200dp" android:layout_height="100dp" android:text="A2DP Connect"/>
+        <Button android:textSize="25dp" android:gravity="center" android:id="@+id/button_a2dp_disconnect" android:layout_width="200dp" android:layout_height="100dp" android:text="A2DP Disconnect"/>
+        <Button android:textSize="25dp" android:gravity="center" android:id="@+id/button_avrcp_connect" android:layout_width="200dp" android:layout_height="100dp" android:text="AVRCP Connect"/>
+        <Button android:textSize="25dp" android:gravity="center" android:id="@+id/button_avrcp_disconnect" android:layout_width="200dp" android:layout_height="100dp" android:text="AVRCP Disconnect"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+        <Button android:textSize="25dp" android:gravity="center" android:id="@+id/button_avrcp_register_1" android:layout_width="135dp" android:layout_height="100dp" android:text="Register 1"/>
+        <Button android:textSize="25dp" android:gravity="center" android:id="@+id/button_avrcp_register_2" android:layout_width="135dp" android:layout_height="100dp" android:text="Register 2"/>
+        <Button android:textSize="25dp" android:gravity="center" android:id="@+id/button_avrcp_register_5" android:layout_width="135dp" android:layout_height="100dp" android:text="Register 5"/>
+        <Button android:textSize="25dp" android:gravity="center" android:id="@+id/button_avrcp_register_8" android:layout_width="135dp" android:layout_height="100dp" android:text="Register 8"/>
+        <Button android:textSize="25dp" android:gravity="center" android:id="@+id/button_avrcp_capability" android:layout_width="135dp" android:layout_height="100dp" android:text="Capability"/>
+        <Button android:textSize="25dp" android:gravity="center" android:id="@+id/button_avrcp_element_attribute" android:layout_width="135dp" android:layout_height="100dp" android:text="Elements"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+        <Button android:textSize="25dp" android:gravity="center" android:id="@+id/button_get_play_status" android:layout_width="135dp" android:layout_height="100dp" android:text="PlayStatus"/>
+        <Button android:textSize="25dp" android:gravity="center" android:id="@+id/button_list_attr" android:layout_width="135dp" android:layout_height="100dp" android:text="ListAttr"/>
+        <Button android:textSize="25dp" android:gravity="center" android:id="@+id/button_list_re_value" android:layout_width="135dp" android:layout_height="100dp" android:text="ListReValue"/>
+        <Button android:textSize="25dp" android:gravity="center" android:id="@+id/button_list_sh_value" android:layout_width="135dp" android:layout_height="100dp" android:text="ListShValue"/>
+        <Button android:textSize="25dp" android:gravity="center" android:id="@+id/button_prev_group" android:visibility="visible" android:layout_width="135dp" android:layout_height="100dp" android:text="PrevGroup"/>
+        <Button android:textSize="25dp" android:gravity="center" android:id="@+id/button_next_group" android:visibility="visible" android:layout_width="135dp" android:layout_height="100dp" android:text="NextGroup"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+        <Button android:textSize="25dp" android:gravity="center" android:id="@+id/button_set_RE_value_off" android:layout_width="135dp" android:layout_height="100dp" android:text="SetReOff"/>
+        <Button android:textSize="25dp" android:gravity="center" android:id="@+id/button_set_RE_value_all" android:layout_width="135dp" android:layout_height="100dp" android:text="SetReAll"/>
+        <Button android:textSize="25dp" android:gravity="center" android:id="@+id/button_set_SH_value_off" android:layout_width="135dp" android:layout_height="100dp" android:text="SetShOff"/>
+        <Button android:textSize="25dp" android:gravity="center" android:id="@+id/button_set_SH_value_all" android:layout_width="135dp" android:layout_height="100dp" android:text="SetShAll"/>
+        <Button android:textSize="25dp" android:gravity="center" android:id="@+id/button_get_RE_value" android:visibility="visible" android:layout_width="135dp" android:layout_height="100dp" android:text="GetReValue"/>
+        <Button android:textSize="25dp" android:gravity="center" android:id="@+id/button_get_SH_value" android:visibility="visible" android:layout_width="135dp" android:layout_height="100dp" android:text="GetShValue"/>
+    </LinearLayout>
+</LinearLayout>

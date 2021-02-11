@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:id="@+id/ll_numpad" android:padding="50dp" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="2">
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <ImageView android:id="@+id/iv_one" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/btn_jianpan_1_selector" android:layout_weight="1"/>
+            <ImageView android:id="@+id/iv_two" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/btn_jianpan_2_selector" android:layout_weight="1"/>
+            <ImageView android:id="@+id/iv_three" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/btn_jianpan_3_selector" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <ImageView android:id="@+id/iv_four" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/btn_jianpan_4_selector" android:layout_weight="1"/>
+            <ImageView android:id="@+id/iv_five" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/btn_jianpan_5_selector" android:layout_weight="1"/>
+            <ImageView android:id="@+id/iv_six" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/btn_jianpan_6_selector" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <ImageView android:id="@+id/iv_seven" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/btn_jianpan_7_selector" android:layout_weight="1"/>
+            <ImageView android:id="@+id/iv_eight" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/btn_jianpan_8_selector" android:layout_weight="1"/>
+            <ImageView android:id="@+id/iv_nine" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/btn_jianpan_9_selector" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <ImageView android:id="@+id/iv_xinghao" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/btn_jianpan_xinghao_selector" android:layout_weight="1"/>
+            <ImageView android:id="@+id/iv_zero" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/btn_jianpan_0_selector" android:layout_weight="1"/>
+            <ImageView android:id="@+id/iv_jinghao" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/btn_jianpan_jinghao_selector" android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout android:id="@+id/rl_action" android:padding="10dp" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="2">
+        <View android:id="@+id/write_line" android:background="#fff" android:layout_width="match_parent" android:layout_height="1dp" android:layout_centerInParent="true"/>
+        <TextView android:textSize="23sp" android:textColor="#fff" android:gravity="center_horizontal" android:id="@+id/tv_phonenumber" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_above="@+id/write_line"/>
+        <ImageView android:id="@+id/iv_callout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="40dp" android:layout_marginTop="20dp" android:src="@drawable/btn_jianpan_bohao_selector" android:layout_below="@+id/write_line"/>
+        <ImageView android:id="@+id/iv_delete" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginRight="40dp" android:src="@drawable/btn_jianpan_qingchu_selector" android:layout_below="@+id/write_line" android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+</LinearLayout>

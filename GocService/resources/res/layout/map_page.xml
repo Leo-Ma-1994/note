@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="2" android:layout_weight="1">
+        <TextView android:textColor="#fff" android:id="@+id/title_map_source" android:background="#666" android:paddingLeft="5dp" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="SIM"/>
+        <ListView android:id="@+id/list_messages" android:layout_width="match_parent" android:layout_height="414dp" android:stackFromBottom="false"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <Button android:id="@+id/button_delete_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Delete Message" android:layout_weight="1"/>
+                <Button android:id="@+id/button_read_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Read Status" android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="2">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:gravity="center" android:layout_width="match_parent" android:layout_height="30dp" android:text="MAP State : " android:layout_weight="1"/>
+            <TextView android:gravity="center" android:id="@+id/text_state_map" android:layout_width="match_parent" android:layout_height="30dp" android:text="" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:gravity="center" android:layout_width="match_parent" android:layout_height="30dp" android:text="Register State : " android:layout_weight="1"/>
+            <TextView android:gravity="center" android:id="@+id/text_state_register" android:layout_width="match_parent" android:layout_height="30dp" android:text="" android:layout_weight="1"/>
+        </LinearLayout>
+        <Button android:gravity="center" android:id="@+id/button_inbox" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Inbox" android:layout_weight="1"/>
+        <Button android:gravity="center" android:id="@+id/button_sent" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Sent" android:layout_weight="1"/>
+        <Button android:id="@+id/button_sendMessage" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Send Message" android:layout_weight="1"/>
+        <Button android:gravity="center" android:id="@+id/button_map_register" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Register" android:layout_weight="1"/>
+        <Button android:gravity="center" android:id="@+id/button_map_unregister" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Unregister" android:layout_weight="1"/>
+        <Button android:gravity="center" android:id="@+id/button_map_delete" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Delete" android:layout_weight="1"/>
+        <Button android:gravity="center" android:id="@+id/button_map_switch_storage" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Database" android:layout_weight="1"/>
+        <Button android:gravity="center" android:id="@+id/button_map_interrupt" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Interrupt" android:layout_weight="1"/>
+        <Button android:gravity="center" android:id="@+id/button_back" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Back" android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>

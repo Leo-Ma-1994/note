@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_gravity="center" android:orientation="vertical" android:background="@drawable/bt_little_bg" android:padding="10dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15dp">
+            <TextView android:textSize="22sp" android:textColor="#ffffffff" android:ellipsize="end" android:gravity="center" android:id="@+id/incoming_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="150dp" android:singleLine="true" android:maxLength="10"/>
+            <TextView android:textSize="22sp" android:textColor="#ffffffff" android:ellipsize="end" android:gravity="center" android:id="@+id/incoming_number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:singleLine="true" android:maxLength="20"/>
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15dp">
+            <TextView android:textSize="22sp" android:textColor="@android:color/white" android:gravity="center" android:layout_gravity="center" android:id="@+id/tv_phone_incoming" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10dp"/>
+            <Chronometer android:textSize="22sp" android:textColor="@android:color/white" android:gravity="center" android:layout_gravity="center" android:id="@+id/chronometer_incoming" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10dp"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="10dp">
+        <ImageButton android:id="@+id/switch_digit_key" android:background="@android:color/transparent" android:visibility="gone" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/btn_jianpan_selector" android:layout_weight="1"/>
+        <ImageButton android:id="@+id/ibt_accept_or_switch" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:src="@drawable/btn_little_jieting_selector" android:layout_weight="1"/>
+        <ImageButton android:id="@+id/ibt_reject" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8dp" android:src="@drawable/btn_little_guaduan_selector" android:layout_weight="1"/>
+        <ImageButton android:id="@+id/btn_mic_mute" android:background="@android:color/transparent" android:visibility="gone" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/btn_jianpan_jingyin_selector" android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>

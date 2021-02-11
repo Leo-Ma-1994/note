@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="2" android:versionName="1.0" android:compileSdkVersion="28" android:compileSdkVersionCodename="9" package="com.goodocom.gocsdk" platformBuildVersionCode="28" platformBuildVersionName="9">
+    <uses-sdk android:minSdkVersion="22" android:targetSdkVersion="28"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG"/>
+    <uses-permission android:name="android.permission.READ_CALL_LOG"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
+    <uses-permission android:name="android.permission.modify_phone_state"/>
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT"/>
+    <uses-permission android:name="android.permission.READ_PROFILE"/>
+    <uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <application android:theme="@android:style/Theme.Light.NoTitleBar" android:label="@string/app_name" android:icon="@drawable/ic_launcher" android:name="com.goodocom.gocsdk.GocApplication" android:debuggable="true" android:testOnly="false" android:allowBackup="true" android:appComponentFactory="android.support.v4.app.CoreComponentFactory">
+        <activity android:name="com.goodocom.gocsdk.activity.HfpCallBaseActivity"/>
+        <activity android:label="@string/app_name" android:name="com.goodocom.gocsdk.activity.MainActivity" android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@android:style/Theme.Translucent.NoTitleBar" android:name="com.goodocom.gocsdk.activity.TransActivity"/>
+        <activity android:name="com.goodocom.gocsdk.activity.CallActivity" android:launchMode="singleTop" android:screenOrientation="landscape"/>
+        <activity android:name="com.goodocom.gocsdk.activity.IncomingActivity" android:launchMode="singleTop" android:screenOrientation="landscape"/>
+        <activity android:theme="@android:style/Theme.Translucent.NoTitleBar" android:name="com.goodocom.gocsdk.activity.TransparentActivity"/>
+        <service android:name="com.goodocom.gocsdk.service.GocsdkService"/>
+        <service android:name="com.goodocom.gocsdk.service.PlayerService"/>
+        <service android:name="com.goodocom.gocsdk.service.ScoService"/>
+        <receiver android:name="com.goodocom.gocsdk.receiver.BootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.goodocom.gocsdk.originbt.OriginBluetoothService"/>
+        <service android:name="com.goodocom.gocsdk.music.GocAvrcpControllerService" android:enabled="true" android:exported="true"/>
+    </application>
+</manifest>

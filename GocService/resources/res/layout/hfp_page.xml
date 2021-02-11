@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="2">
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="2">
+            <TextView android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Device: " android:layout_weight="2"/>
+            <TextView android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Operator: " android:layout_weight="2"/>
+            <TextView android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:text="LocalNumber: " android:layout_weight="2"/>
+            <TextView android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Input: " android:layout_weight="2"/>
+            <TextView android:gravity="center" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Name : " android:layout_weight="2"/>
+            <TextView android:gravity="center" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Hold : " android:layout_weight="2"/>
+            <TextView android:gravity="center" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Active : " android:layout_weight="2"/>
+            <TextView android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:text="List : " android:layout_weight="1"/>
+            <TextView android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Number : " android:layout_weight="2"/>
+            <TextView android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:text="HFP State : " android:layout_weight="2"/>
+            <TextView android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Sco State : " android:layout_weight="2"/>
+            <TextView android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Voice Control:" android:layout_weight="2"/>
+            <TextView android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:text="InBand Ring:" android:layout_weight="2"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <TextView android:gravity="center" android:id="@+id/text_device_name" android:layout_width="match_parent" android:layout_height="match_parent" android:text="" android:layout_weight="2"/>
+            <TextView android:gravity="center" android:id="@+id/text_operator" android:layout_width="match_parent" android:layout_height="match_parent" android:text="" android:layout_weight="2"/>
+            <TextView android:gravity="center" android:id="@+id/text_local_number" android:layout_width="match_parent" android:layout_height="match_parent" android:text="" android:layout_weight="2"/>
+            <TextView android:gravity="center" android:id="@+id/text_input" android:layout_width="match_parent" android:layout_height="match_parent" android:text="" android:layout_weight="2"/>
+            <TextView android:gravity="center" android:id="@+id/text_name" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:text="" android:layout_weight="2"/>
+            <TextView android:gravity="center" android:id="@+id/text_hold" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:text="" android:layout_weight="2"/>
+            <TextView android:gravity="center" android:id="@+id/text_active" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:text="" android:layout_weight="2"/>
+            <ListView android:id="@+id/call_list" android:layout_width="match_parent" android:layout_height="match_parent" android:stackFromBottom="false" android:choiceMode="singleChoice" android:layout_weight="1"/>
+            <TextView android:gravity="center" android:id="@+id/text_number" android:layout_width="match_parent" android:layout_height="match_parent" android:text="" android:layout_weight="2"/>
+            <TextView android:gravity="center" android:id="@+id/text_state_hfp" android:layout_width="match_parent" android:layout_height="match_parent" android:text="" android:layout_weight="2"/>
+            <TextView android:gravity="center" android:id="@+id/text_state_sco" android:layout_width="match_parent" android:layout_height="match_parent" android:text="" android:layout_weight="2"/>
+            <TextView android:gravity="center" android:id="@+id/text_state_voice_control" android:layout_width="match_parent" android:layout_height="match_parent" android:text="" android:layout_weight="2"/>
+            <TextView android:gravity="center" android:id="@+id/text_state_inband_ringtone" android:layout_width="match_parent" android:layout_height="match_parent" android:text="" android:layout_weight="2"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <TextView android:gravity="center" android:id="@+id/text_state_service" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Service" android:layout_weight="1"/>
+            <TextView android:gravity="center" android:id="@+id/text_state_roam" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Roam" android:layout_weight="1"/>
+            <TextView android:gravity="center" android:id="@+id/text_state_signal" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Signal" android:layout_weight="1"/>
+            <TextView android:gravity="center" android:id="@+id/text_state_battery" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Battery" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <Button android:gravity="center" android:id="@+id/button_1" android:layout_width="match_parent" android:layout_height="match_parent" android:text="1" android:layout_weight="1"/>
+            <Button android:gravity="center" android:id="@+id/button_2" android:layout_width="match_parent" android:layout_height="match_parent" android:text="2" android:layout_weight="1"/>
+            <Button android:gravity="center" android:id="@+id/button_3" android:layout_width="match_parent" android:layout_height="match_parent" android:text="3" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <Button android:gravity="center" android:id="@+id/button_4" android:layout_width="match_parent" android:layout_height="match_parent" android:text="4" android:layout_weight="1"/>
+            <Button android:gravity="center" android:id="@+id/button_5" android:layout_width="match_parent" android:layout_height="match_parent" android:text="5" android:layout_weight="1"/>
+            <Button android:gravity="center" android:id="@+id/button_6" android:layout_width="match_parent" android:layout_height="match_parent" android:text="6" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <Button android:gravity="center" android:id="@+id/button_7" android:layout_width="match_parent" android:layout_height="match_parent" android:text="7" android:layout_weight="1"/>
+            <Button android:gravity="center" android:id="@+id/button_8" android:layout_width="match_parent" android:layout_height="match_parent" android:text="8" android:layout_weight="1"/>
+            <Button android:gravity="center" android:id="@+id/button_9" android:layout_width="match_parent" android:layout_height="match_parent" android:text="9" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <Button android:gravity="center" android:id="@+id/button_asterisk" android:layout_width="match_parent" android:layout_height="match_parent" android:text="*" android:layout_weight="1"/>
+            <Button android:gravity="center" android:id="@+id/button_0" android:layout_width="match_parent" android:layout_height="match_parent" android:text="0" android:layout_weight="1"/>
+            <Button android:gravity="center" android:id="@+id/button_pound" android:layout_width="match_parent" android:layout_height="match_parent" android:text="#" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <Button android:gravity="center" android:id="@+id/button_dial" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Dial" android:layout_weight="1"/>
+            <Button android:gravity="center" android:id="@+id/button_redial" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Redial" android:layout_weight="1"/>
+            <Button android:gravity="center" android:id="@+id/button_pickup" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Answer" android:layout_weight="1"/>
+            <Button android:gravity="center" android:id="@+id/button_reject" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Reject" android:layout_weight="1"/>
+            <Button android:gravity="center" android:id="@+id/button_terminate" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Terminate" android:layout_weight="1"/>
+            <Button android:gravity="center" android:id="@+id/button_delete" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Delete" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <Button android:gravity="center" android:id="@+id/button_pickup0" android:layout_width="match_parent" android:layout_height="match_parent" android:text="AnswerNone" android:layout_weight="1"/>
+            <Button android:gravity="center" android:id="@+id/button_pickup1" android:layout_width="match_parent" android:layout_height="match_parent" android:text="AnswerHeld" android:layout_weight="1"/>
+            <Button android:gravity="center" android:id="@+id/button_pickup2" android:layout_width="match_parent" android:layout_height="match_parent" android:text="AnswerTerminate" android:layout_weight="1"/>
+            <Button android:gravity="center" android:id="@+id/button_mic_mute" android:layout_width="match_parent" android:layout_height="match_parent" android:text="MicMute" android:layout_weight="1"/>
+            <Button android:gravity="center" android:id="@+id/button_mic_unmute" android:layout_width="match_parent" android:layout_height="match_parent" android:text="MicUnMute" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <Button android:gravity="center" android:id="@+id/button_sco_hf" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Sco To HF" android:layout_weight="1"/>
+            <Button android:gravity="center" android:id="@+id/button_sco_ag" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Sco To AG" android:layout_weight="1"/>
+            <Button android:gravity="center" android:id="@+id/button_voice_call_on" android:layout_width="match_parent" android:layout_height="match_parent" android:text="VoiceOn" android:layout_weight="1"/>
+            <Button android:gravity="center" android:id="@+id/button_voice_call_off" android:layout_width="match_parent" android:layout_height="match_parent" android:text="VoiceOff" android:layout_weight="1"/>
+            <Button android:gravity="center" android:id="@+id/button_back" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Back" android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -2,3 +2,16 @@
 
 
 
+
+
+```
+button.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        Intent intent = new Intent();
+        intent.setClass(GroupActivity.this, LauncherActivity.class);
+        intent.putExtra("fragment_flag",1);
+        startActivity(intent);
+    }
+});
+```

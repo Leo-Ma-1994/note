@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="res_2131492914_base_textappearance_appcompat_widget_button_borderless_colored" parent="@android:style/TextAppearance.Material.Widget.Button.Borderless.Colored">
+    </style>
+    <style name="res_2131492915_base_textappearance_appcompat_widget_button_colored" parent="@android:style/TextAppearance.Material.Widget.Button.Colored">
+    </style>
+    <style name="res_2131493103_textappearance_compat_notification_info_media" parent="@style/res_2131493102_textappearance_compat_notification_info">
+    </style>
+    <style name="res_2131493106_textappearance_compat_notification_media" parent="@style/res_2131493101_textappearance_compat_notification">
+    </style>
+    <style name="res_2131493108_textappearance_compat_notification_time_media" parent="@style/res_2131493107_textappearance_compat_notification_time">
+    </style>
+    <style name="res_2131493110_textappearance_compat_notification_title_media" parent="@style/res_2131493109_textappearance_compat_notification_title">
+    </style>
+</resources>

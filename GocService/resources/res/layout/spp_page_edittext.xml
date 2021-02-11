@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <EditText android:id="@+id/edittext_sppmessage" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Please input Spp message" android:ems="10">
+        <requestFocus/>
+    </EditText>
+    <EditText android:id="@+id/edittext_sendcount" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Please input sending count" android:ems="10"/>
+</LinearLayout>

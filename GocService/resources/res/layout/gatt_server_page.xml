@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="2" android:layout_weight="1">
+        <TextView android:textColor="#fff" android:id="@+id/title_source" android:background="#666" android:paddingLeft="5dp" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Log"/>
+        <ListView android:id="@+id/list_log" android:layout_width="match_parent" android:layout_height="match_parent" android:stackFromBottom="false" android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="2">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:gravity="center" android:layout_width="match_parent" android:layout_height="30dp" android:text="GattS State : " android:layout_weight="1"/>
+            <TextView android:gravity="center" android:id="@+id/text_state_gatt_server" android:layout_width="match_parent" android:layout_height="30dp" android:text="" android:layout_weight="1"/>
+        </LinearLayout>
+        <Button android:gravity="center" android:id="@+id/button_add_service" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Add Service" android:layout_weight="1"/>
+        <Button android:gravity="center" android:id="@+id/button_clean_service" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Clean Service" android:layout_weight="1"/>
+        <Button android:gravity="center" android:id="@+id/button_listen" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Listen" android:layout_weight="1"/>
+        <Button android:gravity="center" android:id="@+id/button_unlisten" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Stop listen" android:layout_weight="1"/>
+        <Button android:gravity="center" android:id="@+id/button_clean_log" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Clean log" android:layout_weight="1"/>
+        <Button android:gravity="center" android:id="@+id/button_back" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Back" android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>

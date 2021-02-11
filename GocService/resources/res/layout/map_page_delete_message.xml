@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <EditText android:id="@+id/edit_delete_message_input_handle" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Please input handle" android:ems="10" android:singleLine="true"/>
+    <requestFocus/>
+    <RadioGroup android:id="@+id/radioGroup_delete_message" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <RadioButton android:textColor="#ffffff" android:id="@+id/radio_inbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:text="Inbox"/>
+        <RadioButton android:textColor="#ffffff" android:id="@+id/radio_sent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sent"/>
+    </RadioGroup>
+</LinearLayout>

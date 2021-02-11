@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="res_2131558462_base_theme_appcompat" parent="@style/res_2131558495_base_v28_theme_appcompat">
+    </style>
+    <style name="res_2131558469_base_theme_appcompat_light" parent="@style/res_2131558496_base_v28_theme_appcompat_light">
+    </style>
+    <style name="res_2131558495_base_v28_theme_appcompat" parent="@style/res_2131558492_base_v26_theme_appcompat">
+        <item name="dialogCornerRadius">?android:attr/dialogCornerRadius</item>
+    </style>
+    <style name="res_2131558496_base_v28_theme_appcompat_light" parent="@style/res_2131558493_base_v26_theme_appcompat_light">
+        <item name="dialogCornerRadius">?android:attr/dialogCornerRadius</item>
+    </style>
+</resources>

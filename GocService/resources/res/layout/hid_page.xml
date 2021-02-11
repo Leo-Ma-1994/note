@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="horizontal" android:id="@+id/header" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentRight="true">
+        <TextView android:padding="1dp" android:layout_width="0dp" android:layout_height="wrap_content" android:text="X:" android:layout_weight="1"/>
+        <TextView android:id="@+id/xCoord" android:padding="1dp" android:layout_width="0dp" android:layout_height="wrap_content" android:text="-" android:layout_weight="2"/>
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:text="Y:" android:layout_weight="1"/>
+        <TextView android:id="@+id/yCoord" android:padding="1dp" android:layout_width="0dp" android:layout_height="wrap_content" android:text="-" android:layout_weight="2"/>
+        <TextView android:id="@+id/tvAction" android:padding="1dp" android:layout_width="0dp" android:layout_height="wrap_content" android:text="-" android:layout_weight="2"/>
+        <TextView android:id="@+id/tvXmax" android:padding="1dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="X-max: 1200"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/header2" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/header" android:layout_alignParentLeft="true" android:layout_alignParentRight="true">
+        <TextView android:id="@+id/tvStatus" android:padding="1dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="2"/>
+        <TextView android:id="@+id/tvYmax" android:padding="1dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Y-max: 1900"/>
+    </LinearLayout>
+    <com.goodocom.bttek.bt.demo.ui.MyTouchPad android:id="@+id/canvas" android:background="#ffaaaaaa" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_above="@+id/virtualKeys" android:layout_below="@+id/header2" android:layout_alignParentLeft="true" android:layout_alignParentRight="true"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/virtualKeys" android:layout_width="match_parent" android:layout_height="100dp" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="1dp" android:layout_weight="1">
+            <Button android:id="@+id/keyLeft" android:layout_width="0dp" android:layout_height="match_parent" android:text="Left" android:layout_weight="1"/>
+            <Button android:id="@+id/keyVirtual" android:padding="1dp" android:layout_width="0dp" android:layout_height="match_parent" android:text="Virtual Keys" android:layout_weight="1"/>
+            <Button android:id="@+id/keyRight" android:padding="1dp" android:layout_width="0dp" android:layout_height="match_parent" android:text="Right" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="1dp" android:layout_weight="1">
+            <Button android:id="@+id/keyConnect" android:layout_width="0dp" android:layout_height="match_parent" android:text="Connect" android:layout_weight="1"/>
+            <Button android:id="@+id/keyDisconnect" android:padding="1dp" android:layout_width="0dp" android:layout_height="match_parent" android:text="Disconnect" android:layout_weight="1"/>
+            <Button android:id="@+id/keyBack" android:padding="1dp" android:layout_width="0dp" android:layout_height="match_parent" android:text="Back" android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="@drawable/beijing" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_centerHorizontal="true">
+        <TextView android:textSize="25sp" android:textColor="#fff" android:id="@+id/call_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="未知联系人"/>
+        <TextView android:textSize="20sp" android:textColor="#fff" android:id="@+id/call_number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="10010"/>
+        <TextView android:textSize="20sp" android:textColor="#fff" android:id="@+id/call_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="00:00"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/ll_action" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <ImageView android:id="@+id/iv_number" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/btn_jianpan_selector" android:layout_weight="1"/>
+        <ImageView android:id="@+id/iv_guaduan" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/btn_jianpan_guaduan_selector" android:layout_weight="1"/>
+        <ImageView android:id="@+id/iv_qieshengdao" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/btn_jianpan_qieshengdao_selector" android:layout_weight="1"/>
+        <ImageView android:id="@+id/iv_bujingyin" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/btn_jianpan_bujingyin_selector" android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/ll_numpad" android:paddingTop="10dp" android:paddingBottom="10dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_above="@+id/ll_action">
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <ImageView android:id="@+id/iv_one" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/btn_jianpan_1_selector" android:layout_weight="1"/>
+            <ImageView android:id="@+id/iv_two" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/btn_jianpan_2_selector" android:layout_weight="1"/>
+            <ImageView android:id="@+id/iv_three" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/btn_jianpan_3_selector" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <ImageView android:id="@+id/iv_four" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/btn_jianpan_4_selector" android:layout_weight="1"/>
+            <ImageView android:id="@+id/iv_five" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/btn_jianpan_5_selector" android:layout_weight="1"/>
+            <ImageView android:id="@+id/iv_six" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/btn_jianpan_6_selector" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <ImageView android:id="@+id/iv_seven" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/btn_jianpan_7_selector" android:layout_weight="1"/>
+            <ImageView android:id="@+id/iv_eight" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/btn_jianpan_8_selector" android:layout_weight="1"/>
+            <ImageView android:id="@+id/iv_nine" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/btn_jianpan_9_selector" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <ImageView android:id="@+id/iv_xinghao" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/btn_jianpan_xinghao_selector" android:layout_weight="1"/>
+            <ImageView android:id="@+id/iv_zero" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/btn_jianpan_0_selector" android:layout_weight="1"/>
+            <ImageView android:id="@+id/iv_jinghao" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/btn_jianpan_jinghao_selector" android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

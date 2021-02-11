@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@drawable/beijing" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.goodocom.gocsdk.view.ExtendedViewPager android:layout_gravity="center_horizontal" android:id="@+id/goc_view_pager" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="5"/>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/bottom" android:layout_width="match_parent" android:layout_height="100dp" android:layout_weight="1">
+        <ImageView android:layout_gravity="center_horizontal" android:id="@+id/iv_calllog" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/btn_calllog_selector" android:layout_weight="1"/>
+        <ImageView android:layout_gravity="center_horizontal" android:id="@+id/iv_phonebook" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/btn_contact_selector" android:layout_weight="1"/>
+        <ImageView android:layout_gravity="center_horizontal" android:id="@+id/iv_callphone" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/btn_jianpan_selector" android:layout_weight="1"/>
+        <ImageView android:layout_gravity="center_horizontal" android:id="@+id/iv_music" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/btn_music_selector" android:layout_weight="1"/>
+        <ImageView android:layout_gravity="center_horizontal" android:id="@+id/iv_search" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/btn_btinfo_selector" android:layout_weight="1"/>
+        <ImageView android:layout_gravity="center_horizontal" android:id="@+id/iv_pair" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/btn_btpairlist_selector" android:layout_weight="1"/>
+        <ImageView android:layout_gravity="center_horizontal" android:id="@+id/iv_settings" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/btn_setting_selector" android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>

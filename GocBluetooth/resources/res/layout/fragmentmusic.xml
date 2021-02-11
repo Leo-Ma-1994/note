@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/rl_music_right" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="match_parent">
+        <ImageView android:layout_gravity="center_vertical" android:id="@+id/iv_music_cover" android:layout_width="180dp" android:layout_height="150dp" android:layout_marginLeft="60dp" android:src="@drawable/ic_music_cd"/>
+        <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="20sp" android:textColor="#ffffff" android:ellipsize="end" android:layout_gravity="center_horizontal" android:id="@+id/tv_music_name" android:layout_width="150dp" android:layout_height="50dp" android:singleLine="true"/>
+            <TextView android:textSize="20sp" android:textColor="#ffffff" android:id="@+id/tv_music_posandtotal" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0/0"/>
+        </LinearLayout>
+        <TextView android:textSize="20sp" android:textColor="#ffffff" android:ellipsize="end" android:layout_gravity="center_horizontal" android:id="@+id/tv_music_artist" android:layout_width="150dp" android:layout_height="50dp" android:layout_marginLeft="10dp" android:singleLine="true"/>
+        <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@+id/rl_progress_info" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="40dp" android:layout_centerHorizontal="true">
+            <TextView android:textColor="#ffffff" android:id="@+id/tv_currenttime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="00:00"/>
+            <SeekBar android:id="@+id/sb_progress" android:layout_width="280dp" android:layout_height="wrap_content" android:maxHeight="4dp" android:max="100" android:progress="0" android:minHeight="4dp" android:thumb="@drawable/main_seekbar_thumb_light" android:thumbOffset="10px"/>
+            <TextView android:textColor="#ffffff" android:id="@+id/tv_totaltime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="00:00"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/ll_function" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@+id/iv_vol_down" android:visibility="gone" android:layout_width="50dp" android:layout_height="50dp" android:src="@drawable/volume_down"/>
+            <ImageView android:id="@+id/iv_previous" android:layout_width="50dp" android:layout_height="50dp" android:layout_marginLeft="40dp" android:src="@drawable/ic_media_previous"/>
+            <ImageView android:id="@+id/iv_pause" android:layout_width="50dp" android:layout_height="50dp" android:layout_marginLeft="40dp" android:src="@drawable/ic_media_play"/>
+            <ImageView android:id="@+id/iv_next" android:layout_width="50dp" android:layout_height="50dp" android:layout_marginLeft="40dp" android:src="@drawable/ic_media_next"/>
+            <ImageView android:layout_gravity="center_vertical" android:id="@+id/iv_vol_up" android:visibility="gone" android:layout_width="50dp" android:layout_height="50dp" android:layout_marginLeft="40dp" android:src="@drawable/volume_up"/>
+        </LinearLayout>
+        <Button android:id="@+id/swith_device_remote" android:visibility="gone" android:layout_width="100dp" android:layout_height="60dp" android:text="切换仪表"/>
+        <Button android:id="@+id/swith_device_local" android:visibility="gone" android:layout_width="100dp" android:layout_height="60dp" android:text="切换耳机"/>
+    </LinearLayout>
+</LinearLayout>

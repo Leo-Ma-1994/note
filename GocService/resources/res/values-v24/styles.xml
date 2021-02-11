@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="res_2131558450_base_textappearance_appcompat_widget_button_borderless_colored" parent="@android:style/TextAppearance.Material.Widget.Button.Borderless.Colored">
+    </style>
+    <style name="res_2131558451_base_textappearance_appcompat_widget_button_colored" parent="@android:style/TextAppearance.Material.Widget.Button.Colored">
+    </style>
+</resources>

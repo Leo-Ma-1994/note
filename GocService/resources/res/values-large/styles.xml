@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="res_2131558468_base_theme_appcompat_dialogwhenlarge" parent="@style/res_2131558466_base_theme_appcompat_dialog_fixedsize">
+    </style>
+    <style name="res_2131558475_base_theme_appcompat_light_dialogwhenlarge" parent="@style/res_2131558473_base_theme_appcompat_light_dialog_fixedsize">
+    </style>
+</resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="res_2131492906_base_textappearance_appcompat_widget_actionbar_menu" parent="@android:style/TextAppearance.Material.Widget.ActionBar.Menu">
+    </style>
+    <style name="res_2131492916_base_textappearance_appcompat_widget_button_inverse" parent="@android:style/TextAppearance.Material.Widget.Button.Inverse">
+    </style>
+    <style name="res_2131492926_base_theme_appcompat" parent="@style/res_2131492954_base_v23_theme_appcompat">
+    </style>
+    <style name="res_2131492933_base_theme_appcompat_light" parent="@style/res_2131492955_base_v23_theme_appcompat_light">
+    </style>
+    <style name="res_2131492954_base_v23_theme_appcompat" parent="@style/res_2131492952_base_v22_theme_appcompat">
+        <item name="actionBarItemBackground">?android:attr/actionBarItemBackground</item>
+        <item name="actionMenuTextAppearance">?android:attr/actionMenuTextAppearance</item>
+        <item name="actionMenuTextColor">?android:attr/actionMenuTextColor</item>
+        <item name="controlBackground">@drawable/abc_control_background_material</item>
+        <item name="ratingBarStyleIndicator">?android:attr/ratingBarStyleIndicator</item>
+        <item name="ratingBarStyleSmall">?android:attr/ratingBarStyleSmall</item>
+    </style>
+    <style name="res_2131492955_base_v23_theme_appcompat_light" parent="@style/res_2131492953_base_v22_theme_appcompat_light">
+        <item name="actionBarItemBackground">?android:attr/actionBarItemBackground</item>
+        <item name="actionMenuTextAppearance">?android:attr/actionMenuTextAppearance</item>
+        <item name="actionMenuTextColor">?android:attr/actionMenuTextColor</item>
+        <item name="controlBackground">@drawable/abc_control_background_material</item>
+        <item name="ratingBarStyleIndicator">?android:attr/ratingBarStyleIndicator</item>
+        <item name="ratingBarStyleSmall">?android:attr/ratingBarStyleSmall</item>
+    </style>
+    <style name="res_2131492982_base_widget_appcompat_button_borderless_colored" parent="@android:style/Widget.Material.Button.Borderless.Colored">
+    </style>
+    <style name="res_2131492984_base_widget_appcompat_button_colored" parent="@android:style/Widget.Material.Button.Colored">
+    </style>
+    <style name="res_2131493015_base_widget_appcompat_ratingbar_indicator" parent="@android:style/Widget.Material.RatingBar.Indicator">
+    </style>
+    <style name="res_2131493016_base_widget_appcompat_ratingbar_small" parent="@android:style/Widget.Material.RatingBar.Small">
+    </style>
+    <style name="res_2131493022_base_widget_appcompat_spinner_underlined" parent="@android:style/Widget.Material.Spinner.Underlined">
+    </style>
+</resources>

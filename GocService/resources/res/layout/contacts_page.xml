@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="2" android:layout_weight="1">
+        <TextView android:textColor="#fff" android:id="@+id/title_source" android:background="#666" android:paddingLeft="5dp" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="SIM"/>
+        <ListView android:id="@+id/list_contacts" android:layout_width="match_parent" android:layout_height="match_parent" android:stackFromBottom="false" android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="2">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:gravity="center" android:layout_width="match_parent" android:layout_height="30dp" android:text="Contacts State : " android:layout_weight="1"/>
+            <TextView android:gravity="center" android:id="@+id/text_state_contacts" android:layout_width="match_parent" android:layout_height="30dp" android:text="" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:gravity="center" android:layout_width="match_parent" android:layout_height="30dp" android:text="Used Time : " android:layout_weight="1"/>
+            <TextView android:gravity="center" android:id="@+id/text_used_time" android:layout_width="match_parent" android:layout_height="30dp" android:text="" android:layout_weight="1"/>
+        </LinearLayout>
+        <Button android:gravity="center" android:id="@+id/button_contacts_refresh" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Refresh" android:layout_weight="1"/>
+        <Button android:gravity="center" android:id="@+id/button_contacts_read" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Read" android:layout_weight="1"/>
+        <Button android:gravity="center" android:id="@+id/button_contacts_delete" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Delete" android:layout_weight="1"/>
+        <Button android:gravity="center" android:id="@+id/button_contacts_vcard" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Vcard" android:layout_weight="1"/>
+        <Button android:gravity="center" android:id="@+id/button_back" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Back" android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>

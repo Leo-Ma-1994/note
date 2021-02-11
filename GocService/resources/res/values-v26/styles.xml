@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="res_2131558462_base_theme_appcompat" parent="@style/res_2131558492_base_v26_theme_appcompat">
+    </style>
+    <style name="res_2131558469_base_theme_appcompat_light" parent="@style/res_2131558493_base_v26_theme_appcompat_light">
+    </style>
+    <style name="res_2131558492_base_v26_theme_appcompat" parent="@style/res_2131558490_base_v23_theme_appcompat">
+        <item name="colorError">?android:attr/colorError</item>
+    </style>
+    <style name="res_2131558493_base_v26_theme_appcompat_light" parent="@style/res_2131558491_base_v23_theme_appcompat_light">
+        <item name="colorError">?android:attr/colorError</item>
+    </style>
+    <style name="res_2131558494_base_v26_widget_appcompat_toolbar" parent="@style/res_2131558504_base_v7_widget_appcompat_toolbar">
+        <item name="android:touchscreenBlocksFocus">true</item>
+        <item name="android:keyboardNavigationCluster">true</item>
+    </style>
+    <style name="res_2131558561_base_widget_appcompat_toolbar" parent="@style/res_2131558494_base_v26_widget_appcompat_toolbar">
+    </style>
+</resources>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="2" android:layout_weight="1">
+        <TextView android:textColor="#fff" android:id="@+id/title_spp_source" android:background="#666" android:paddingLeft="5dp" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="SPP Message"/>
+        <ListView android:id="@+id/list_spp_messages" android:layout_width="match_parent" android:layout_height="match_parent" android:stackFromBottom="true" android:transcriptMode="alwaysScroll" android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="2">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:gravity="center" android:layout_width="match_parent" android:layout_height="30dp" android:text="SPP State : " android:layout_weight="1"/>
+            <TextView android:gravity="center" android:id="@+id/text_state_spp" android:layout_width="match_parent" android:layout_height="30dp" android:text="" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:gravity="center" android:layout_width="match_parent" android:layout_height="30dp" android:text="Device Address : " android:layout_weight="1"/>
+            <TextView android:gravity="center" android:id="@+id/text_spp_connected_address" android:layout_width="match_parent" android:layout_height="30dp" android:text="" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:gravity="center" android:layout_width="match_parent" android:layout_height="30dp" android:text="Device Name : " android:layout_weight="1"/>
+            <TextView android:gravity="center" android:id="@+id/text_spp_device_name" android:layout_width="match_parent" android:layout_height="30dp" android:text="" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:gravity="center" android:layout_width="match_parent" android:layout_height="30dp" android:text="Delay : " android:layout_weight="1"/>
+            <TextView android:gravity="center" android:id="@+id/text_spp_send_delay" android:layout_width="match_parent" android:layout_height="30dp" android:text="" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:gravity="center" android:layout_width="match_parent" android:layout_height="30dp" android:text="Count : " android:layout_weight="1"/>
+            <TextView android:gravity="center" android:id="@+id/text_spp_count" android:layout_width="match_parent" android:layout_height="30dp" android:text="" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="I:"/>
+            <TextView android:id="@+id/text_I" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_weight="1"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="N:"/>
+            <TextView android:id="@+id/text_N" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_weight="1"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="D:"/>
+            <TextView android:id="@+id/text_D" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_weight="1"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="E:"/>
+            <TextView android:id="@+id/text_E" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_weight="1"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="X:"/>
+            <TextView android:id="@+id/text_X" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_weight="1"/>
+        </LinearLayout>
+        <Button android:gravity="center" android:id="@+id/button_spp_connect" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Connect" android:layout_weight="1"/>
+        <Button android:gravity="center" android:id="@+id/button_spp_disconnect" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Disconnect" android:layout_weight="1"/>
+        <Button android:gravity="center" android:id="@+id/button_spp_send_test_data" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Send Test Data" android:layout_weight="1"/>
+        <Button android:gravity="center" android:id="@+id/button_spp_send_random_data" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Send Random Data" android:layout_weight="1"/>
+        <Button android:gravity="center" android:id="@+id/button_spp_clear_list" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Clear" android:layout_weight="1"/>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <Button android:gravity="center" android:id="@+id/button_spp_send_delay_increase" android:layout_width="match_parent" android:layout_height="match_parent" android:text="+" android:layout_weight="1"/>
+            <Button android:gravity="center" android:id="@+id/button_spp_send_delay_decrease" android:layout_width="match_parent" android:layout_height="match_parent" android:text="-" android:layout_weight="1"/>
+        </LinearLayout>
+        <Button android:gravity="center" android:id="@+id/button_back" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Back" android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>

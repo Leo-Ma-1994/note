@@ -2,49 +2,27 @@
 
 
 
-/system/lib/hw中定义了硬件抽象层编译的动态库文件。
+# 总览
 
-APP会通过控件调用framework层的libui库，libui库根据ID号选调hardware层的动态库"/system/lib/hw/gralloc.*.so",然后硬件抽象层再继续调用驱动层的接口/dev/fb0
-
-
+![img](https://notepic-1302850888.cos.ap-nanjing.myqcloud.com/img/0_1291704567gJjG.gif)
 
 
 
-通过HAL提供的hw_get_module方法来加载模块ID为HELLO_HARDWARE_MODULE_ID的HAL层模块，
+- 当驱动层提供了HAL层代码时，需要实现JNI接口，为应用上层提供访问下层硬件服务的接口
+
+- 提供一个硬件服务类，
+
+- 在Framework层加载jni库时调用，
+
+- Service类中声明jni可以提供的方法,这样可以确保应用层直接调用系统服务。
 
 
 
-已经有了硬件抽象模块，JNI方法提供Java访问硬件服务接口。
-
-在frameworks/base/services/core/jni编写
-
-
-
-内核空间中硬件驱动程序
-
-/kernel/frivers/leds/中编译成之后，可以看到有该设备 dev/
-
-
-
-
-
-通过设备文件来连接HAl层模块和Linux内核驱动程序模块。
-
-HAL层(libhardware)添加接口支持访问硬件，来和驱动程序交互。
-
-/hardware/libhardware/modules/antled/antled.c中
-
-
+# HAL相关基础知识
 
 驱动中会创建驱动中会创建dev/hello设备节点和/sys/class/hello/hello/val 设备节点，没有实现proc/下的对应的设备节点。/sys/class/hello/hello/val 主要用于快速测试，而dev/hello则主要用于供上层应用调用。
 
 
-
-
-
-
-
-# HAL规范要求
 
 模块ID
 
@@ -101,6 +79,38 @@ typedef struct antled_device
 
 
 其中函数的声明表示为该HAL对上提供的函数接口。
+
+
+
+/system/lib/hw中定义了硬件抽象层编译的动态库文件。
+
+APP会通过控件调用framework层的libui库，libui库根据ID号选调hardware层的动态库"/system/lib/hw/gralloc.*.so",然后硬件抽象层再继续调用驱动层的接口/dev/fb0
+
+
+
+通过HAL提供的hw_get_module方法来加载模块ID为HELLO_HARDWARE_MODULE_ID的HAL层模块，
+
+
+
+已经有了硬件抽象模块，JNI方法提供Java访问硬件服务接口。
+
+在frameworks/base/services/core/jni编写
+
+
+
+内核空间中硬件驱动程序
+
+/kernel/frivers/leds/中编译成之后，可以看到有该设备 dev/
+
+
+
+
+
+通过设备文件来连接HAl层模块和Linux内核驱动程序模块。
+
+HAL层(libhardware)添加接口支持访问硬件，来和驱动程序交互。
+
+/hardware/libhardware/modules/antled/antled.c中.
 
 
 
@@ -590,11 +600,7 @@ frameworks/base/core/java/android/app/*Manager.java
 
 依赖头文件
 
-
-
-
-
-# 新建一个Service
+##新建一个Service
 
 　　1) 接口：接口供应用调用
 
@@ -622,7 +628,7 @@ frameworks/base/core/java/android/app/*Manager.java
 
 # 使用系统服务
 
-有很多系统服务管理,如振东管理服务Vibrator,电池管理服务BatteryManager.
+有很多系统服务管理,如震动管理服务Vibrator,电池管理服务BatteryManager.
 
 Manager提供对系统层的控制接口.
 
@@ -652,10 +658,6 @@ context抽象类,contextImpl实现类,contextWrapper实现类,contextImpl与cont
 
 
 
-
-
-
-## 硬件服务添加权限
 
 # Bug解决
 
@@ -836,35 +838,23 @@ getenforce 得到结果为Permissive
 
 
 
-![img](https://notepic-1302850888.cos.ap-nanjing.myqcloud.com/img/0_1291704567gJjG.gif)
 
-jni层注册方法，使得Framework层可以使用这些方法
 
 
 
-当驱动层提供了HAL层代码时，需要实现JNI接口，为应用上层提供访问下层硬件服务的接口
 
-提供一个硬件服务类，
 
-在Framework层加载jni库时调用，
 
-Service类中声明jni可以提供的方法。
 
-这样可以确保应用层直接调用系统服务。
 
 
 
-在安卓系统初始化时，可以自动加载该JNI的方法调用表、
 
 
 
-# 文件节点
 
-传统设备文件/dev/
 
-proc系统文件/proc/
 
-devfs系统属性文件/sys/class/leds
 
 
 
@@ -874,181 +864,15 @@ devfs系统属性文件/sys/class/leds
 
 
 
-# Android添加JNI到源码中
 
 
 
-HAL主要存储在libhardware(新架构，调整为HAL stub模式)中以及libhardware_legcy(旧架构，采取链接库模块观念进行)
 
 
 
-selinux
 
 
 
-setenforce 0
 
-getenforce
 
-ps -A |grep system_server
-
-kill 733
-
-
-
-通过JNI调用HAL层接口
-
-在Framework层提供Java接口的硬件服务，添加硬件访问服务。
-
-
-
-
-
-
-
-//TODO
-
-HIDL
-
-
-
-
-
-10-28 10:36:07.284   331   331 E SELinux : avc:  denied  { find } for service=led pid=2734 uid=10074 scontext=u:r:untrusted_app:s0:c74,c256,c512,c768 tcontext=u:object_r:led_service:s0 tclass=service_manager permissive=0
-
-
-
-
-
-audit(0.0:270): avc: denied { write } for name="brightness" dev="sysfs" ino=24189 scontext=u:r:system_server:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=0
-
-
-
-
-
-
-
-
-
-
-
-\#define LED1_DEVICE_BLUE    "/sys/class/leds/info1_blue/brightness"
-
-\#define LED1_DEVICE_RED "/sys/class/leds/info1_red/brightness"
-
-\#define LED1_DEVICE_GREEN   "/sys/class/leds/info1_green/brightness"
-
-\#define LED2_DEVICE_BLUE    "/sys/class/leds/info2_blue/brightness"
-
-\#define LED2_DEVICE_RED "/sys/class/leds/info2_red/brightness"
-
-\#define LED2_DEVICE_GREEN   "/sys/class/leds/info2_green/brightness"
-
-\#define LED3_DEVICE_BLUE    "/sys/class/leds/info3_blue/brightness"
-
-\#define LED3_DEVICE_RED "/sys/class/leds/info3_red/brightness"
-
-\#define LED3_DEVICE_GREEN   "/sys/class/leds/info3_green/brightness"
-
-\#define LED4_DEVICE_BLUE    "/sys/class/leds/info4_blue/brightness"
-
-\#define LED4_DEVICE_RED "/sys/class/leds/info4_red/brightness"
-
-\#define LED4_DEVICE_GREEN   "/sys/class/leds/info4_green/brightness"
-
-
-
-
-
-
-
-
-
-/sys/class/leds/info1_blue/brightness    0666 root root
-/sys/class/leds/info1_red/brightness    0666 root root
-/sys/class/leds/info1_green/brightness    0666 root root
-/sys/class/leds/info2_blue/brightness    0666 root root
-/sys/class/leds/info2_red/brightness    0666 root root
-/sys/class/leds/info2_green/brightness    0666 root root
-/sys/class/leds/info3_blue/brightness    0666 root root
-/sys/class/leds/info3_red/brightness    0666 root root
-/sys/class/leds/info3_green/brightness    0666 root root
-/sys/class/leds/info4_blue/brightness    0666 root root
-/sys/class/leds/info4_red/brightness    0666 root root
-/sys/class/leds/info4_green/brightness    0666 root root
-
- # Start leds.ko
-    chmod 0777 /vendor/lib/modules/leds-gpio.ko 
-    insmod /vendor/lib/modules/leds-gpio.ko
-
-
-
-
-
-```
-      traceBeginAndSlog("StartLedService");
-        try {
-            Slog.i("maxiang", "StartLedService");
-            LedService ledService = new LedService();
-            ServiceManager.addService(Context.LED_SERVICE, ledService);
-            for (int i = 0; i < 3 ; i++) {
-                ledService.set_customled_status(255,10);
-                ledService.set_customled_status(255,12);
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        ledService.set_customled_status(0,10);
-                        ledService.set_customled_status(0,12);
-                    }
-                },1000);
-                ledService.customled_close();
-            }
-        } catch (Throwable e) {
-            reportWtf("starting Led Service", e);
-        }
-        traceEnd();
-    }
-```
-
-
-
-```
-		// Message msg = Message.obtain();
-		// msg.arg1 = 0;
-		// msg.what = 0;
-		// mLedHandler.sendMessage(msg);
-```
-
-
-
-
-
-```
-	// private Handler mLedHandler = new Handler() {
-	// 	@Override
-	// 	public void handleMessage(Message msg) {
-	// 		super.handleMessage(msg);
-	// 		if (msg.what == 0) {
-	// 			set_customled_status(255, 10);
-	// 			set_customled_status(255, 11);
-	// 			set_customled_status(255, 12);
-	// 		} else {
-	// 			set_customled_status(0, 10);
-	// 			set_customled_status(0, 11);
-	// 			set_customled_status(0, 12);
-	// 		}
-	// 		msg.arg1++;
-	// 		if (msg.arg1 < 8) {
-	// 			Message msg1 = Message.obtain();
-	// 			msg1.arg1 = msg.arg1;
-	// 			msg1.what = (msg.what == 0 ? 1 : 0);
-	// 			sendMessageDelayed(msg1, 1000);
-	// 		} else {
-	// 			for (int i = 1; i <= 12; i++) {
-	// 				set_customled_status(0, i);
-	// 			}
-	// 		}
-	// 	}
-	// };
-```
 
