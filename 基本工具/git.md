@@ -5,3 +5,10 @@
 ```git
 git push -u origin master
 ```
+
+更改git默认编辑器为vs code
+
+```
+git config --global --replace-all core.editor "code -w"
+```
+
