@@ -12,40 +12,54 @@ adb pull /storage/sdcard0/TSLog/2018-08-13.txt C:\Users\Administrator\Desktop
 
 adb shell dumpsys window | grep mCurrentFocus
 
-- 打开应用
 
-adb shell am start com.android.music
 
-特定页面
-
-adb shell am start com.android.music/活动名
-
-更换即可观看结果及地方和古巨基
-
-## 启动基本组件
+## 启动/关闭基本组件
 
 ### 启动activity
 
-adb shell am start  
+adb shell am start -n ｛包名｝/｛包名｝. {活动(activity)名称}
+
+```
+adb shell am start -n com.android.browser/com.android.browser.BrowserActivity
+```
 
 ### 启动service
 
-### 启动broadcast
-
-启动activity
+adb shell am satrtservice  -n  {包名｝/｛包名｝. {服务(service)名称}
 
 ```
-adb shell am start 包名
-
-```
-
-启动service
-
-```
-adb shell am startservice 
+//启动service
+adb shell am startservice -n com.android.traffic/com.android.traffic.maniservice
+//停止service
+adb shell am stopservice -n com.android.traffic/com.android.traffic.maniservice
 ```
 
 
+
+### 发送broadcast
+
+```
+adb shell am broadcast -a android.net.conn.CONNECTIVITY_CHANGE
+```
+
+
+
+### 关闭应用
+
+adb shell am force-stop {包名}
+
+```
+adb shell am force-stop com.android.browser
+```
+
+
+
+### grep过滤关键字
+
+```
+adb logcat | grep -E "keyword1|keyword2"
+```
 
 
 
