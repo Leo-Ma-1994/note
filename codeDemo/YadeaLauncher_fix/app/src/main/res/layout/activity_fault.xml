@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/fault_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bg_blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/btn_fault_return"
+        android:layout_width="234dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="125dp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/btn_fault_return"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="65dp"
+        android:src="@drawable/ic_fault_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_fault_return"
+        android:layout_width="wrap_content"
+        android:layout_height="27dp"
+        android:layout_marginStart="205dp"
+        android:layout_marginTop="60dp"
+        android:text="DASHBOARD"
+        android:textColor="#FFFFFFFF"
+        android:textSize="19dp"
+        android:fontFamily="@font/micro_technic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_fault_clean"
+        android:layout_width="135dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="778dp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/btn_fault_clean"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+
+    <TextView
+        android:id="@+id/tv_fault_clean"
+        android:layout_width="wrap_content"
+        android:layout_height="27dp"
+        android:layout_marginStart="787dp"
+        android:layout_marginTop="60dp"
+        android:text="CLEAN UP"
+        android:textColor="#FF4AE6C1"
+        android:textSize="19sp"
+        android:fontFamily="@font/micro_technic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_fault_title"
+        android:layout_width="wrap_content"
+        android:layout_height="130dp"
+        android:layout_marginStart="390dp"
+        android:layout_marginTop="125dp"
+        android:text="FAULT LIST"
+        android:textColor="#FFFFFFFF"
+        android:textSize="42dp"
+        android:fontFamily="@font/micro_technic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <GridView
+        android:id="@+id/gv_fault_list"
+        android:layout_width="805dp"
+        android:layout_height="wrap_content"
+        android:listSelector="#00000000"
+        android:numColumns="4"
+        android:horizontalSpacing="12dp"
+        android:layout_marginStart="125dp"
+        android:layout_marginTop="220dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </GridView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

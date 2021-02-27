@@ -1,0 +1,6 @@
+package com.yadea.launcher.bean;
+
+public enum Status {
+    HEAD_LAMP, SIDE_BRACE, PHONE, CRUISE, HOT, TIRE, BREAKDOWN, FIX, GRIP, MOTOR_FAULT, BATTERY_STATE, BATTERY_LOW, CHARGING, CHARGED
+
+}

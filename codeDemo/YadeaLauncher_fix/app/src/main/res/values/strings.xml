@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">launcher</string>
+
+    <string name="battery_invalid">主电池失效</string>
+    <string name="battery_invalid_sub">副电池失效</string>
+    <string name="battery_invalid_all">主、副电池失效</string>
+
+    <string name="WRENCH_FAULT">扳手故障</string>
+    <string name="TRIANGLE_FAULT">物联网模块通讯故障</string>
+    <string name="MOTOR_FAULT">电机故障</string>
+    <string name="ENGINE_FAULT">MCU通讯故障</string>
+    <string name="MCU_FAULT">转把故障</string>
+    <string name="BACKLIGHT_FAULT">背光灯故障</string>
+    <string name="EEPROM_FAULT">EEPROM故障</string>
+    <string name="LIGHT_SENSOR_FAULT">光线传感器故障</string>
+    <string name="LEFT_LED_FAULT">左转向灯故障</string>
+    <string name="RIGHT_LED_FAULT">右转向灯故障</string>
+    <string name="title_activity_menu">MenuActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+
+</resources>
