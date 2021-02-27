@@ -91,3 +91,15 @@ adb install -t ***.apk
 2. fastboot flash system_a（分区名） system.img（镜像文件）
 3. fastboot --set-active=a（设置启动A系统）
 4. fastboot reboot (重启进入正常系统)
+
+
+
+
+
+\# WiFi ADB
+\## 1. 重启ADB
+adb tcpip 5555
+\## 2. 查询IP
+adb shell ifconfig wlan0
+\## 3. 连接
+adb connect 10.105.22.14
