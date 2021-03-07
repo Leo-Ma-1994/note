@@ -3,6 +3,5 @@ public class App {
         WeatherData weatherData = new WeatherData();
         weatherData.registerObserver(new WeatherDisplay());
         weatherData.weatherChanged(10,10);
-        
     }
 }
